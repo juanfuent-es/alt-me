@@ -1,3 +1,16 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@layer theme {
+    :root {
+        --default-font-family: "Work Sans", sans-serif;
+    }
+}
+
+@layer base {
+    body {
+    }
+}
+
+@layer utilities {
+}

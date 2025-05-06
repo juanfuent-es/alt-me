@@ -2,19 +2,179 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barrio&family=Bigelow+Rules&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>alt+me</title>
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <main id="app">
+    <main id="app" class="container mx-auto p-8">
       <header class="mx-auto max-w-2xl text-center py-24 sm:py-32 lg:px-8">
-        <p class="text-base/7 font-semibold">Proyecto Final</p>
-        <h1 class="mt-2 text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">alt+me</h1>
-        <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Exploración de una identidad alternativa a través del diseño e interactividad web.</p>
+        <h1 class="mt-2 text-7xl">alt+me</h1>
+        <p class="mt-0 mb-2 text-sm font-medium text-pretty uppercase text-gray-500">Diseño y Desarrollo web<small class="block">Exploración de alter-egos digitales</small></p>
+        <p class="text-sm font-semibold text-gray-400 ">Proyecto Final 💀 Deadline 03/06/2025</p>
       </header>
-      <article class="prose prose-slate mx-auto lg:prose-lg">
+      <article class="prose prose-slate lg:prose-lg mx-auto">
+        <section class="py-16">
+          <!-- <h2 class="font-light text-4xl text-center">Descripción</h2> -->
+          <div class="max-w-3xl bg-white">
+            <p class="text-center">
+              Explora dentro de tu interior para crear una expresión digital de un alter-ego.
+              El proyecto combinará <span class="font-bold ">narrativa personal</span>, <span class="font-bold ">diseño web</span> y 
+              <span class="font-bold ">expresión creativa</span> mediante tecnologías front-end modernas.
+            </p>
+          </div>
+        </section>
+        
+        <section class="mb-16">
+          <h2 class="text-3xl mb-8 text-center font-light">Requisitos Técnicos</h2>
+          
+          <div class="flex flex-col gap-6">
+            <!-- Card 1 -->
+            <div class="requirement-card">
+              <h3 class="text-3xl font-light mb-3">1. Estructura y Semántica</h3>
+              <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                <li>Usar HTML semántico con etiquetas adecuadas (<code>&lt;header&gt;</code>,
+                  <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>, etc.).
+              </li>
+              <li>Utilizar atributos obligatorios como <code>title</code> en enlaces y <code>alt</code> en
+                  imágenes para mejorar la accesibilidad.</li>
+                <li>Jerarquía adecuada de headings (<code>h1</code>-<code>h6</code>)</li>
+                <li>Optimizar la jerarquía de títulos.</li>
+                <li>Jerarquización de Información</li>
+                <li>Proporcionar descripciones alternativas en imágenes mediante el atributo <code>alt</code>.</li>
+                <li>Utilizar enlaces descriptivos en lugar de textos genéricos como "haz clic aquí".</li>
+              </ul>
+            </div>
+            
+            <div class="requirement-card">
+              <h3 class="text-3xl font-light mb-3">1. Metadata</h3>
+              <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                <ul>
+                  <li>Incluye un título de página.</li>
+                  <li>Incluye definición de lenguaje.</li>
+                  <li>Incluir un favicon compatible con navegadores modernos y un fallback para versiones antiguas. Puedes ayudarte de generadores como <a href="https://realfavicongenerator.net/" title="Generador de Favicons" target="_blank">realfavicongenerator.net</a></li>
+                  <li>Agregar metadata Open Graph para mejorar la previsualización en redes sociales.</li>
+              </ul>
+            </div>
+        
+            <!-- Card 2 -->
+            <div class="requirement-card">
+              <h3 class="text-2xl font-light mb-3">2. Estilos</h3>
+              <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                <li>Implementación con Tailwind CSS</li>
+                <li>Mínimo 3 <code>componentes/utilities</code> personalizados</li>
+                <li>Paleta de colores coherente con buen contraste de lectura para mejorar la accesibilidad.</li>
+                <li>Favicons personalizados</li>
+                <li>Selecciona una tipografía legible y con estilo coherente.</li>
+                <!-- <li>Dark Mode</li> -->
+              </ul>
+            </div>
+        
+            <!-- Card 3 -->
+            <div class="requirement-card">
+              <h3 class="text-2xl font-light mb-3">3. Responsividad</h3>
+              <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                <li>Diseño mobile-first</li>
+                <li>Breakpoints para tablet/desktop</li>
+                <li>Imágenes responsive (<code>srcset</code> o <code>&lt;picture&gt;</code>)</li>
+              </ul>
+            </div>
+        
+            <!-- Card 4 -->
+            <div class="requirement-card">
+              <h3 class="text-2xl font-light mb-3">4. Contenido Mínimo</h3>
+              <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                <li>Página de Inicio (presentación)</li>
+                <li>Sección "Acerca de/About" (explicación conceptual)</li>
+                <li>Página de detalle de Proyecto/Obra/Pieza/Post</li>
+                <li>Página de Contacto (Redes sociales)</li>
+              </ul>
+            </div>
 
+            <!-- Card 5 -->
+            <div class="requirement-card">
+              <h3 class="text-2xl font-light mb-3">5. Funcionalidades</h3>
+              <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                <li>Al menos un elemento interactivo</li>
+                <li>Navegación entre páginas funcional</li>
+                <li>Efectos hover/transiciones CSS</li>
+              </ul>
+            </div>
+        
+            <!-- Card 6 -->
+            <div class="requirement-card">
+              <h3 class="text-2xl font-light mb-3">6. Despliegue</h3>
+              <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                <li>Repositorio GitHub organizado</li>
+                <li>Deploy en GitHub Pages</li>
+                <li>README.md completo</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        
+        <section class="max-w-4xl">
+          <h2 class="text-center text-4xl font-light">Criterios de Evaluación</h2>
+          <ul>
+            <li>Funcionalidad general y experiencia de usuario.</li>
+            <li>Calidad del código: estructura, indentación y nomenclatura.</li>
+            <li>Organización del proyecto en carpetas con módulos y clases bien definidos.</li>
+            <li>Diseño, responsividad y accesibilidad:
+              <ul>
+                <li>Uso adecuado del tamaño de tipografía.</li>
+                <li>Tamaño recomendado para tamaño de botones en múltiples dispositivos.</li>
+                <li>Contraste suficiente entre colores. <br>
+                  <small><a href="https://color.adobe.com/es/create/color-contrast-analyzer" target="_blank">Verificador de contraste</a></small>
+                </li>
+              </ul>
+            </li>
+            <li>Presencia de metadata y uso de etiquetas semánticas.</li>
+            <li>Originalidad, complejidad y funcionalidad del código entregado.</li>
+            <li>Repositorio y commits en github.</li>
+            <li>Publicación en github pages.</li>
+          </ul>
+          <div class="overflow-x-auto">
+            <table class="min-w-full bg-white  overflow-hidden ">
+              <thead class="">
+                <tr>
+                  <th class="py-3 px-4 text-left">Categoría</th>
+                  <th class="py-3 px-4 text-center">Peso</th>
+                  <th class="py-3 px-4 text-left">Detalles</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="py-3 px-4 font-semibold">HTML Semántico</td>
+                  <td class="py-3 px-4 text-center">20%</td>
+                  <td class="py-3 px-4">Estructura adecuada, metadata, accesibilidad</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="py-3 px-4 font-semibold">Tailwind CSS</td>
+                  <td class="py-3 px-4 text-center">15%</td>
+                  <td class="py-3 px-4">Uso de utilities y componentes</td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 font-semibold">Diseño Responsivo</td>
+                  <td class="py-3 px-4 text-center">20%</td>
+                  <td class="py-3 px-4">Adaptabilidad a distintos dispositivos</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="py-3 px-4 font-semibold">Contenido Creativo</td>
+                  <td class="py-3 px-4 text-center">25%</td>
+                  <td class="py-3 px-4">Originalidad y profundidad del alter-ego</td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 font-semibold">Funcionalidad</td>
+                  <td class="py-3 px-4 text-center">20%</td>
+                  <td class="py-3 px-4">Elementos interactivos</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
       </article>
     </main>
     <script type="module" src="/src/main.js"></script>
