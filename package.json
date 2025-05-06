@@ -1,0 +1,25 @@
+{
+  "name": "alt-me",
+  "version": "0.0.0",
+  "private": false,
+  "description": "Exploración de una identidad alternativa a través del diseño e interactividad web.",
+  "homepage": "https://github.com/juanfuent-es/alt-me#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanfuent-es/alt-me.git"
+  },
+  "license": "MIT",
+  "author": "juanfuent-es",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.1.5",
+    "tailwindcss": "^4.1.5",
+    "vite": "^6.3.5"
+  }
+}
