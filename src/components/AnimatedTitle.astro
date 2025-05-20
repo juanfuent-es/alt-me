@@ -1,0 +1,116 @@
+---
+interface Props {
+    text: string;
+    class?: string;
+}
+
+const { text, class: className = '' } = Astro.props;
+---
+
+<header class="text-center">
+    <h1 class={`animated-title text-7xl text-center mx-auto font-bold ${className}`}>
+        {text.split('').map((char, index) => (
+            <div class="char-container" data-char={char}>
+                <span class="char char-1">{char}</span>
+                <span class="char char-2">{char}</span>
+            </div>
+        ))}
+    </h1>
+</header>
+
+<script>
+    import { gsap } from 'gsap';
+
+    class AnimatedTitle {
+
+        constructor() {
+            this.container = document.querySelector('.animated-title');
+            this.chars = this.container?.querySelectorAll('.char-container');
+            this.char_duration = .5;
+            this.timeline = gsap.timeline({
+                paused: true,
+                repeat: -1,
+                defaults: {
+                    ease: "power2.inOut"
+                }
+            });
+            this.init();
+        }
+
+        init() {
+            if (!this.container || !this.chars?.length) return;
+            this.setupInitialState();
+            this.createAnimation();
+            this.timeline.duration(1).play();
+        }
+
+        setupInitialState() {
+            // Posicionar el segundo carácter debajo
+            gsap.set(this.chars, {
+                position: 'relative',
+                display: 'inline-block'
+            });
+            // Setea la posición del segundo carácter
+            gsap.set(Array.from(this.chars).map(char => char.querySelector('.char-2')), {
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                y: "100%"
+            });
+        }
+
+        createAnimation() {
+            // Crear la animación para cada par de caracteres
+            Array.from(this.chars).forEach((charContainer: Element, index: number) => {
+                const char1 = charContainer.querySelector('.char-1');
+                const char2 = charContainer.querySelector('.char-2');
+
+                if (!char1 || !char2) return;
+
+                // Agregar la animación al timeline con stagger
+                this.timeline
+                    .to(char1, {
+                        y: "-100%",
+                        duration: this.char_duration,
+                        ease: "power2.inOut"
+                    }, index * .1)
+                    .to(char2, {
+                        y: "0%",
+                        duration: this.char_duration,
+                        ease: "power2.inOut"
+                    }, index * .1)
+            });
+        }
+
+        destroy() {
+            this.timeline.kill();
+        }
+    }
+
+    // Inicializar cuando el DOM esté listo
+    const title = new AnimatedTitle();
+</script>
+
+<style>
+    .animated-title {
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    .char-container {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .char {
+        display: inline-block;
+        will-change: transform;
+    }
+
+    .char-2 {
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+</style> 
