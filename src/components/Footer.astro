@@ -2,41 +2,40 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-gray-800 text-white">
+<footer class="bg-white text-black dark:bg-black dark:text-white">
   <div class="container mx-auto px-6 py-8">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- Company Info -->
-      <div>
-        <h3 class="text-xl font-bold mb-4">Tu Empresa</h3>
-        <p class="text-gray-300">
-          Descripción breve de tu empresa o proyecto aquí.
-        </p>
+      <div class="text-md font-bold">
+        <h3 class="">CENTRO | Diseño, Cine y Televisión</h3>
+        <p>Av. Constituyentes 455, CDMX</p>
+        <a href="tel:+525527899000" title="Marcar (52)55 2789 9000">(+52)55 2789 9000</a>
       </div>
 
-      <!-- Quick Links -->
-      <div>
-        <h3 class="text-xl font-bold mb-4">Enlaces Rápidos</h3>
-        <ul class="space-y-2">
-          <li><a href="/" class="text-gray-300 hover:text-white">Inicio</a></li>
-          <li><a href="/about" class="text-gray-300 hover:text-white">Acerca</a></li>
-          <li><a href="/contact" class="text-gray-300 hover:text-white">Contacto</a></li>
-        </ul>
+      <div class="text-center">
+        <a href="https://centro.edu.mx/" class="inline-block" target="_blank">
+          <img src="/centro-flag-loop.webp" alt="CENTRO Diseño, Cine, Televisión | Logotipo" class="w-36">
+        </a>
       </div>
 
       <!-- Contact Info -->
       <div>
-        <h3 class="text-xl font-bold mb-4">Contacto</h3>
-        <ul class="space-y-2 text-gray-300">
-          <li>Email: info@tudominio.com</li>
-          <li>Teléfono: (123) 456-7890</li>
-          <li>Dirección: Tu dirección aquí</li>
+        <h3 class="sr-only">Contacto</h3>
+        <ul class="space-y-2 grid grid-cols-4 flex-wrap">
+          <a href="https://instagram.com/centro_U/" title="CENTRO en Instagram" target="_blank">IG</a>
+          <a href="https://linkedin.com/school/centro.edu.mx/" title="CENTRO en LinkedIn" target="_blank">LI</a>
+          <a href="https://tiktok.com/@centro_diseno_cine_tv?lang=es" title="CENTRO en TikTok" target="_blank">TT</a>
+          <a href="https://facebook.com/centro.edu.mx" title="CENTRO en Facebook" target="_blank">FB</a>
+          <a href="https://twitter.com/centro_news" title="CENTRO en X" target="_blank">TW</a>
+          <a href="https://youtube.com/channel/UC40YNTjmtfGfYOmogaPvXHQ" title="CENTRO en Youtube" target="_blank">YT</a>
+          <a href="https://open.spotify.com/show/5zodXwizDTfyAeyjRnV1Ck" title="CENTRO en Spotify" target="_blank">SP</a>
         </ul>
       </div>
     </div>
 
     <!-- Copyright -->
-    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-      <p>&copy; {currentYear} Tu Empresa. Todos los derechos reservados.</p>
+    <div class="text-center">
+      <p>CENTRO &copy; {currentYear}</p>
     </div>
   </div>
 </footer> 

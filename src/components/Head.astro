@@ -1,21 +1,40 @@
 ---
 import Favicon from "../assets/Favicon.astro";
 
-const { title = "My Astro Website", ...props } = Astro.props;
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "CENTRO Diseño, Cine, Televisión", 
+  description = "CENTRO es una institución de educación superior especializada en diseño, cine y televisión." 
+} = Astro.props;
 ---
-<link rel="sitemap" href="/sitemap-index.xml">
-<title>{title}</title>
-<meta name="description" content="Welcome to my new Astro site!">
 
-<!-- Web analytics -->
-<script data-goatcounter="https://my-account.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{title}</title>
 
-<!-- Open Graph tags -->
-<meta property="og:title" content="My Alt Version" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://www.example.com/" />
-<meta property="og:description" content="Exploración de una identidad alternativa a través de tecnologías web." />
-<meta property="og:image" content="https://www.example.com/img-metadata.png">
-<meta property="og:image:alt" content="">
+  <!-- Dark mode script -->
+  <script is:inline>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
 
-<Favicon />
+  <!-- Open Graph tags -->
+  <meta property="og:title" content={title} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={Astro.url} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="/centro-logo.svg">
+  <meta property="og:image:alt" content="CENTRO Diseño, Cine, Televisión">
+
+  <Favicon />
+</head>

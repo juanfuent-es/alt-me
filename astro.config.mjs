@@ -4,8 +4,12 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   site: "https://www.example.com",
   base: "/",
-  trailingSlash: "always",
+  trailingSlash: "never",
   vite: {
     plugins: [tailwindcss()],
   },
+  typescript: {
+    strict: false,
+    check: false
+  }
 });
