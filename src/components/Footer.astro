@@ -1,15 +1,16 @@
 ---
+import SocialIcon from './SocialIcon.astro';
 const currentYear = new Date().getFullYear();
 ---
 
 <footer class="bg-white text-black dark:bg-black dark:text-white">
   <div class="container mx-auto px-6 py-8">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
       <!-- Company Info -->
       <div class="text-md font-bold">
         <h3 class="">CENTRO | Diseño, Cine y Televisión</h3>
-        <p>Av. Constituyentes 455, CDMX</p>
-        <a href="tel:+525527899000" title="Marcar (52)55 2789 9000">(+52)55 2789 9000</a>
+        <a class="block" href="https://maps.app.goo.gl/gKXSB5bNvybGQoF67" title="Ver en Google Maps" target="_blank">Av. Constituyentes 455, CDMX</a>
+        <a class="block" href="tel:+525527899000" title="Marcar (52)55 2789 9000">(+52)55 2789 9000</a>
       </div>
 
       <div class="text-center">
@@ -19,23 +20,23 @@ const currentYear = new Date().getFullYear();
       </div>
 
       <!-- Contact Info -->
-      <div>
+      <div class="flex justify-end items-start">
         <h3 class="sr-only">Contacto</h3>
-        <ul class="space-y-2 grid grid-cols-4 flex-wrap">
-          <a href="https://instagram.com/centro_U/" title="CENTRO en Instagram" target="_blank">IG</a>
-          <a href="https://linkedin.com/school/centro.edu.mx/" title="CENTRO en LinkedIn" target="_blank">LI</a>
-          <a href="https://tiktok.com/@centro_diseno_cine_tv?lang=es" title="CENTRO en TikTok" target="_blank">TT</a>
-          <a href="https://facebook.com/centro.edu.mx" title="CENTRO en Facebook" target="_blank">FB</a>
-          <a href="https://twitter.com/centro_news" title="CENTRO en X" target="_blank">TW</a>
-          <a href="https://youtube.com/channel/UC40YNTjmtfGfYOmogaPvXHQ" title="CENTRO en Youtube" target="_blank">YT</a>
-          <a href="https://open.spotify.com/show/5zodXwizDTfyAeyjRnV1Ck" title="CENTRO en Spotify" target="_blank">SP</a>
+        <ul class="grid grid-cols-4 gap-2 justify-center w-40">
+          <li><SocialIcon name="instagram" url="https://instagram.com/centro_U/" title="CENTRO en Instagram" /></li>
+          <li><SocialIcon name="linkedin" url="https://linkedin.com/school/centro.edu.mx/" title="CENTRO en LinkedIn" /></li>
+          <li><SocialIcon name="tiktok" url="https://tiktok.com/@centro_diseno_cine_tv?lang=es" title="CENTRO en TikTok" /></li>
+          <li><SocialIcon name="facebook" url="https://facebook.com/centro.edu.mx" title="CENTRO en Facebook" /></li>
+          <li><SocialIcon name="twitter" url="https://twitter.com/centro_news" title="CENTRO en X" /></li>
+          <li><SocialIcon name="youtube" url="https://youtube.com/channel/UC40YNTjmtfGfYOmogaPvXHQ" title="CENTRO en Youtube" /></li>
+          <li><SocialIcon name="spotify" url="https://open.spotify.com/show/5zodXwizDTfyAeyjRnV1Ck" title="CENTRO en Spotify" /></li>
         </ul>
       </div>
     </div>
 
     <!-- Copyright -->
-    <div class="text-center">
-      <p>CENTRO &copy; {currentYear}</p>
+    <div class="text-center dark:text-white text-white text-sm font-bold">
+      <p>CENTRO {currentYear}</p>
     </div>
   </div>
 </footer> 
