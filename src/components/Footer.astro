@@ -1,0 +1,42 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-800 text-white">
+  <div class="container mx-auto px-6 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Company Info -->
+      <div>
+        <h3 class="text-xl font-bold mb-4">Tu Empresa</h3>
+        <p class="text-gray-300">
+          Descripción breve de tu empresa o proyecto aquí.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-xl font-bold mb-4">Enlaces Rápidos</h3>
+        <ul class="space-y-2">
+          <li><a href="/" class="text-gray-300 hover:text-white">Inicio</a></li>
+          <li><a href="/about" class="text-gray-300 hover:text-white">Acerca</a></li>
+          <li><a href="/contact" class="text-gray-300 hover:text-white">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-xl font-bold mb-4">Contacto</h3>
+        <ul class="space-y-2 text-gray-300">
+          <li>Email: info@tudominio.com</li>
+          <li>Teléfono: (123) 456-7890</li>
+          <li>Dirección: Tu dirección aquí</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+      <p>&copy; {currentYear} Tu Empresa. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer> 
