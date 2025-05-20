@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.7",
-    "astro": "^5.7.13"
+    "astro": "^5.7.13",
+    "gsap": "^3.13.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",

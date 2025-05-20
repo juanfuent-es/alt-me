@@ -1,0 +1,98 @@
+<div id="preloader" class="fixed inset-0 bg-white dark:bg-black z-50 flex items-center justify-center">
+    <div class="logo-container">
+        <img 
+            src="/centro-flag-loop.webp" 
+            alt="CENTRO Diseño, Cine, Televisión | Logotipo" 
+            class="w-36"
+        />
+    </div>
+</div>
+
+<script>
+    import { gsap } from 'gsap';
+
+    class Preloader {
+        #preloader;
+        #logo;
+        #timeline;
+        #ANIMATION_DURATION = {
+            ENTRY: 0.8,
+            FLOAT: 0.5,
+            EXIT: 1,
+            DELAY: 1000
+        };
+
+        constructor() {
+            this.#preloader = document.getElementById('preloader');
+            this.#logo = this.#preloader?.querySelector('.logo-container') || null;
+            this.#timeline = gsap.timeline({
+                defaults: {
+                    ease: "power2.inOut"
+                }
+            });
+        }
+
+        init() {
+            if (!this.#preloader || !this.#logo) return;
+            this.#setupEventListeners();
+            this.#playEntryAnimation();
+        }
+
+        #setupEventListeners() {
+            window.addEventListener('load', () => {
+                setTimeout(() => this.#playExitAnimation(), this.#ANIMATION_DURATION.DELAY);
+            });
+        }
+
+        #playEntryAnimation() {
+            if (!this.#logo) return;
+
+            this.#timeline
+                .fromTo(this.#logo, 
+                    {
+                        scale: 0.8,
+                        opacity: 0
+                    },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: this.#ANIMATION_DURATION.ENTRY
+                    }
+                )
+                .to(this.#logo, {
+                    y: -20,
+                    duration: this.#ANIMATION_DURATION.FLOAT,
+                    repeat: -1,
+                    yoyo: true
+                });
+        }
+
+        #playExitAnimation() {
+            if (!this.#preloader) return;
+
+            gsap.to(this.#preloader, {
+                yPercent: -100,
+                duration: this.#ANIMATION_DURATION.EXIT,
+                ease: "power2.inOut",
+                onComplete: () => this.#cleanup()
+            });
+        }
+
+        #cleanup() {
+            this.#preloader?.remove();
+            this.#timeline.kill();
+        }
+    }
+
+    // Inicializar el preloader cuando el DOM esté listo
+    document.addEventListener('DOMContentLoaded', () => {
+        const preloader = new Preloader();
+        preloader.init();
+    });
+</script>
+
+<style>
+    .logo-container {
+        will-change: transform;
+    }
+</style> 
