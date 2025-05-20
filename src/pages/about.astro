@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout title="Acerca de Nosotros">
+  <div class="container mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold text-gray-800 mb-8">Acerca de Nosotros</h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- Sección de Historia -->
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <h2 class="text-2xl font-semibold text-gray-700 mb-4">Nuestra Historia</h2>
+        <p class="text-gray-600 mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p class="text-gray-600 mb-6">
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <Button variant="outline" size="sm">Leer más</Button>
+      </div>
+
+      <!-- Sección de Misión y Visión -->
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <h2 class="text-2xl font-semibold text-gray-700 mb-4">Misión y Visión</h2>
+        <div class="mb-6">
+          <h3 class="text-xl font-medium text-gray-700 mb-2">Misión</h3>
+          <p class="text-gray-600">
+            Proporcionar soluciones innovadoras y de alta calidad que satisfagan las necesidades de nuestros clientes.
+          </p>
+        </div>
+        <div class="mb-6">
+          <h3 class="text-xl font-medium text-gray-700 mb-2">Visión</h3>
+          <p class="text-gray-600">
+            Ser líderes en nuestro sector, reconocidos por la excelencia y la innovación en nuestros servicios.
+          </p>
+        </div>
+        <Button>Conoce más</Button>
+      </div>
+    </div>
+
+    <!-- Sección de Equipo -->
+    <div class="mt-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8">Nuestro Equipo</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+          <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
+          <h3 class="text-xl font-semibold text-gray-700">Nombre Apellido</h3>
+          <p class="text-gray-600 mb-4">Cargo</p>
+          <Button variant="secondary" size="sm">Ver perfil</Button>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+          <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
+          <h3 class="text-xl font-semibold text-gray-700">Nombre Apellido</h3>
+          <p class="text-gray-600 mb-4">Cargo</p>
+          <Button variant="secondary" size="sm">Ver perfil</Button>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+          <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
+          <h3 class="text-xl font-semibold text-gray-700">Nombre Apellido</h3>
+          <p class="text-gray-600 mb-4">Cargo</p>
+          <Button variant="secondary" size="sm">Ver perfil</Button>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout> 

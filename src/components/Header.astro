@@ -1,3 +1,8 @@
+---
+import NavLink from './NavLink.astro';
+const currentPath = Astro.url.pathname;
+---
+
 <header class="bg-white shadow-md">
   <nav class="container mx-auto px-6 py-4">
     <div class="flex items-center justify-between">
@@ -8,19 +13,38 @@
       </div>
       
       <div class="hidden md:flex items-center space-x-8">
-        <a href="/" class="text-gray-600 hover:text-gray-900">Inicio</a>
-        <a href="/about" class="text-gray-600 hover:text-gray-900">Acerca</a>
-        <a href="/contact" class="text-gray-600 hover:text-gray-900">Contacto</a>
+        <NavLink href="/" text="Inicio" />
+        <NavLink href="/about" text="Acerca" />
+        <NavLink href="/contact" text="Contacto" />
       </div>
 
       <!-- Mobile menu button -->
       <div class="md:hidden">
-        <button class="text-gray-600 hover:text-gray-900 focus:outline-none">
+        <button class="text-gray-600 hover:text-gray-900 focus:outline-none" id="mobileMenuButton">
           <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </div>
     </div>
+
+    <!-- Mobile menu -->
+    <div class="md:hidden hidden" id="mobileMenu">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <NavLink href="/" text="Inicio" />
+        <NavLink href="/about" text="Acerca" />
+        <NavLink href="/contact" text="Contacto" />
+      </div>
+    </div>
   </nav>
 </header>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobileMenuButton');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>

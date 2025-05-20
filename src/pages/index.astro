@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -8,8 +9,29 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Bienvenido">
 	<div class="container mx-auto px-6 py-12">
 		<h1 class="text-4xl font-bold text-gray-800 mb-8">Bienvenido a mi sitio</h1>
-		<p class="text-lg text-gray-600">
+		<p class="text-lg text-gray-600 mb-8">
 			Este es un ejemplo de una página usando nuestro layout personalizado con Tailwind CSS.
 		</p>
+
+		<div class="space-y-8">
+			<div class="bg-white rounded-lg shadow-md p-6">
+				<h2 class="text-2xl font-semibold text-gray-700 mb-4">Ejemplos de Botones</h2>
+				<div class="flex flex-wrap gap-4">
+					<Button>Botón Primario</Button>
+					<Button variant="secondary">Botón Secundario</Button>
+					<Button variant="outline">Botón Outline</Button>
+					<Button variant="danger">Botón Peligro</Button>
+				</div>
+			</div>
+
+			<div class="bg-white rounded-lg shadow-md p-6">
+				<h2 class="text-2xl font-semibold text-gray-700 mb-4">Diferentes Tamaños</h2>
+				<div class="flex flex-wrap items-center gap-4">
+					<Button size="sm">Botón Pequeño</Button>
+					<Button size="md">Botón Mediano</Button>
+					<Button size="lg">Botón Grande</Button>
+				</div>
+			</div>
+		</div>
 	</div>
 </Layout>
