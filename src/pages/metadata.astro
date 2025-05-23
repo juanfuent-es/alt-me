@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageNavigation from '../components/PageNavigation.astro';
 ---
 
 <Layout title="Metadata">
@@ -9,7 +10,7 @@ import Layout from '../layouts/Layout.astro';
 		<section class="mb-12">
 			<h2 class="text-2xl font-semibold mb-4">Metadata Básica</h2>
 			<div class="grid gap-6">
-				<div class="bg-white p-6 rounded-lg shadow-md">
+				<article class="bg-white p-6 rounded-lg shadow-md">
 					<h3 class="text-xl font-semibold mb-3">Meta Tags Esenciales</h3>
 					<pre class="bg-gray-100 p-4 rounded overflow-x-auto">
 						<code>
@@ -20,9 +21,9 @@ import Layout from '../layouts/Layout.astro';
 &lt;meta name="author" content="Tu Nombre"&gt;
 						</code>
 					</pre>
-				</div>
+				</article>
 
-				<div class="bg-white p-6 rounded-lg shadow-md">
+				<article class="bg-white p-6 rounded-lg shadow-md">
 					<h3 class="text-xl font-semibold mb-3">Open Graph Tags</h3>
 					<pre class="bg-gray-100 p-4 rounded overflow-x-auto">
 						<code>
@@ -33,13 +34,13 @@ import Layout from '../layouts/Layout.astro';
 &lt;meta property="og:type" content="website"&gt;
 						</code>
 					</pre>
-				</div>
+				</article>
 			</div>
 		</section>
 
 		<section class="mb-12">
 			<h2 class="text-2xl font-semibold mb-4">Implementación en Astro</h2>
-			<div class="bg-white p-6 rounded-lg shadow-md">
+			<article class="bg-white p-6 rounded-lg shadow-md">
 				<pre class="bg-gray-100 p-4 rounded overflow-x-auto">
 					<code>
 ---
@@ -67,30 +68,22 @@ const image = "/ruta/a/tu/imagen.jpg";
 &lt;/head&gt;
 					</code>
 				</pre>
-			</div>
+			</article>
 		</section>
 
 		<section class="mb-12">
 			<h2 class="text-2xl font-semibold mb-4">Herramientas de SEO</h2>
-			<div class="grid gap-4">
-				<a href="https://developers.google.com/search/docs" class="text-blue-600 hover:underline" target="_blank">
-					Google Search Central - Documentación oficial
-				</a>
-				<a href="https://metatags.io/" class="text-blue-600 hover:underline" target="_blank">
-					Meta Tags - Generador de meta tags
-				</a>
-				<a href="https://www.heymeta.com/" class="text-blue-600 hover:underline" target="_blank">
-					Hey Meta - Validador de meta tags
-				</a>
-				<a href="https://www.schema.org/" class="text-blue-600 hover:underline" target="_blank">
-					Schema.org - Marcado estructurado
-				</a>
-			</div>
+			<nav class="grid gap-4">
+				<a href="https://developers.google.com/search/docs" class="text-blue-600 hover:underline" target="_blank">Google Search Central - Documentación oficial</a>
+				<a href="https://metatags.io/" class="text-blue-600 hover:underline" target="_blank">Meta Tags - Generador de meta tags</a>
+				<a href="https://www.heymeta.com/" class="text-blue-600 hover:underline" target="_blank">Hey Meta - Validador de meta tags</a>
+				<a href="https://www.schema.org/" class="text-blue-600 hover:underline" target="_blank">Schema.org - Marcado estructurado</a>
+			</nav>
 		</section>
 
 		<section>
 			<h2 class="text-2xl font-semibold mb-4">Buenas Prácticas</h2>
-			<div class="bg-white p-6 rounded-lg shadow-md">
+			<article class="bg-white p-6 rounded-lg shadow-md">
 				<ul class="list-disc pl-6 space-y-2">
 					<li>Escribe descripciones únicas para cada página</li>
 					<li>Mantén los títulos entre 50-60 caracteres</li>
@@ -99,8 +92,12 @@ const image = "/ruta/a/tu/imagen.jpg";
 					<li>Optimiza las imágenes con alt text descriptivo</li>
 					<li>Mantén un tiempo de carga rápido</li>
 				</ul>
-			</div>
+			</article>
 		</section>
 	</main>
+	<PageNavigation
+		prev={{ href: "/rubrica", title: "Rúbrica" }}
+		next={{ href: "/styling", title: "Styling" }}
+	/>
 </Layout>
 

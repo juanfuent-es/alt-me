@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageNavigation from '../components/PageNavigation.astro';
 ---
 
 <Layout title="Assets">
@@ -107,4 +108,8 @@ src/
 			</div>
 		</section>
 	</section>
+  <PageNavigation
+    prev={{ href: "/colores", title: "Colores" }}
+    next={{ href: "/deploy", title: "Deploy" }}
+  />
 </Layout>

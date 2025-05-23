@@ -39,7 +39,7 @@
         @apply w-full h-full object-cover absolute inset-0 -z-10;
     }
     .box h2 {
-        @apply inline-block bg-black text-white py-2 max-w-2/3 px-4 font-bold text-3xl leading-none;
+        @apply inline-block bg-black text-white py-2 max-w-64 px-4 font-bold text-xl md:text-2xl lg:text-3xl leading-none;
     }
 }
 

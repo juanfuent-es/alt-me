@@ -1,0 +1,19 @@
+---
+interface Props {
+  prev?: {
+    href: string;
+    title: string;
+  };
+  next?: {
+    href: string;
+    title: string;
+  };
+}
+
+const { prev, next } = Astro.props;
+---
+
+<nav class="w-full mt-8 grid grid-cols-2 gap-4">
+  {prev && <a href={prev.href} class="box"><h2>← {prev.title}</h2></a>}
+  {next && <a href={next.href} class="box box-landscape"><h2>{next.title} →</h2></a>}
+</nav> 

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageNavigation from '../components/PageNavigation.astro';
 ---
 
 <Layout title="Deploy">
@@ -101,5 +102,8 @@ netlify deploy --prod
 			</div>
 		</section>
 	</main>
+	<PageNavigation
+		prev={{ href: "/assets", title: "Assets" }}
+	/>
 </Layout>
 

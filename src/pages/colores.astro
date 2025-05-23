@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageNavigation from '../components/PageNavigation.astro';
 ---
 
 <Layout title="Colores">
@@ -88,5 +89,9 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</section>
 	</main>
+	<PageNavigation
+		prev={{ href: "/markup", title: "Tipografía" }}
+		next={{ href: "/assets", title: "Assets" }}
+	/>
 </Layout>
 
