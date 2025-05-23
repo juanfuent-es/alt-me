@@ -13,60 +13,58 @@ import Cover from '../assets/cover-alt-me-centro-by-ia-photoshop.jpg';
 ---
 
 <Layout title="Bienvenido">
-	<section id="grid" class="w-full text-left">
-		<div class="grid grid-cols-2 lg:grid-cols-3 grid-flow-dense auto-rows-fr auto-cols-fr">
-			<a href="/about" class="box box-landscape flex items-center justify-center flex-col" title="Información del proyecto">
-				<AnimatedTitle text="ALT+ME"/>
-				<p class="mt-0 mb-2 text-lg font-medium text-pretty uppercase opacity-80 text-center">
-					Exploración de alter-egos digitales
-					<small class="block">Proyecto Final 💀 Deadline 03/06/2025</small>
-				</p>
-				<span class="absolute bottom-4 right-4 bg-black text-white p-2 font-bold">About</span>
-			</a>
-			<a href="/rubrica" class="box group">
-				<h2>Rúbrica</h2>
-				<Image src={Cover} alt="Rúbrica del proyecto ALT+ME" class="w-full h-full object-cover absolute top-0 left-0 object-center group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80" />
-			</a>
-			<a href="/metadata" class="box group">
-				<Image src={metadata} alt="Markup y Metadata del proyecto" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80" />
-				<h2>HTML</h2>
-				<span class="absolute bottom-4 right-4 bg-black text-white p-2 font-bold">Buenas Prácticas</span>
-			</a>
-			<a href="/styling" class="box group">
-				<Image src={styling} alt="Estilos y diseño con Tailwind CSS" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80" />
-				<h2>Styling</h2>
-				<span class="absolute bottom-4 right-4 bg-black text-white p-2 font-bold">Guía</span>
-			</a>
-			<a href="https://docs.astro.build/es/basics/astro-components/" class="box group">
-				<Image src={astro} alt="Componentes de Astro" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80" />
-				<h2>Componentes</h2>
-				<span class="absolute bottom-4 right-4 bg-black text-white p-2 font-bold">Docs</span>
-			</a>
-			<a href="/markup" class="box group">
-				<Image src={typography} alt="Tipografía y diseño de texto" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80" />
-				<h2>Tipografía</h2>
-				<span class="absolute bottom-4 right-4 bg-black text-white p-1 leading-none font-bold">Recomendaciones</span>
-			</a>
-			<a href="/colores" class="box group">
-				<Image src={colores} alt="Paleta de colores y diseño visual" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80" />
-				<h2>Colores</h2>
-				<span class="absolute bottom-4 right-4 bg-black text-white p-1 leading-none font-bold">Recomendaciones</span>
-			</a>
-			<a href="/assets" class="box group">
-				<img src="https://picsum.photos/960/960?random=3" alt="Recursos y assets del proyecto" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80">
-				<h2>Assets</h2>
-				<span class="absolute bottom-4 right-4 bg-black text-white p-1 leading-none font-bold">Recomendaciones</span>
-			</a>
-			<a href="/responsive" class="box group">
-				<img src="https://picsum.photos/960/960?random=3" alt="Recursos y assets del proyecto" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80">
-				<h2>Responsive</h2>
-				<span class="absolute bottom-4 right-4 bg-black text-white p-1 leading-none font-bold">Recomendaciones</span>
-			</a>
-			<a href="/deploy" class="box group box-landscape">
-				<Image src={commits} alt="Despliegue y control de versiones" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80" />
-				<h2>Deploy</h2>
-				<span class="absolute bottom-4 right-4 bg-black text-white p-2 font-bold">Tutorial</span>
-			</a>
-		</div>
+	<section id="grid" class="grid grid-cols-2 lg:grid-cols-3 grid-flow-dense auto-rows-fr auto-cols-fr">
+		<a href="/about" class="box box-landscape flex items-center justify-center flex-col" title="Información del proyecto">
+			<AnimatedTitle text="ALT+ME"/>
+			<p class="mt-0 mb-2 text-lg font-medium text-pretty uppercase opacity-80 text-center">
+				Exploración de alter-egos digitales
+				<small class="block">Proyecto Final 💀 Deadline 03/06/2025</small>
+			</p>
+			<span class="absolute bottom-4 bg-rose-400 right-4 text-black uppercase p-1 leading-none font-bold">About</span>
+		</a>
+		<a href="/rubrica" class="box group">
+			<h2>Rúbrica</h2>
+			<Image src={Cover} alt="Rúbrica del proyecto ALT+ME" class="w-full h-full object-cover absolute top-0 left-0 object-center group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80" />
+		</a>
+		<a href="/metadata" class="box group">
+			<Image src={metadata} alt="Markup y Metadata del proyecto" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80" />
+			<h2>HTML</h2>
+			<span class="absolute bottom-4 bg-emerald-400 right-4 text-black uppercase p-1 leading-none font-bold">Buenas Prácticas</span>
+		</a>
+		<a href="/styling" class="box group">
+			<Image src={styling} alt="Estilos y diseño con Tailwind CSS" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80" />
+			<h2>Styling</h2>
+			<span class="absolute bottom-4 bg-amber-400 right-4 text-black uppercase p-1 leading-none font-bold">Guía</span>
+		</a>
+		<a href="https://docs.astro.build/es/basics/astro-components/" class="box group">
+			<Image src={astro} alt="Componentes de Astro" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80" />
+			<h2>Componentes</h2>
+			<span class="absolute bottom-4 bg-violet-400 right-4 text-black uppercase p-1 leading-none font-bold">Docs</span>
+		</a>
+		<a href="/markup" class="box group">
+			<Image src={typography} alt="Tipografía y diseño de texto" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80" />
+			<h2>Tipografía</h2>
+			<span class="absolute bottom-4 bg-sky-400 right-4 text-black uppercase p-1 leading-none font-bold">Recomendaciones</span>
+		</a>
+		<a href="/colores" class="box group">
+			<Image src={colores} alt="Paleta de colores y diseño visual" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80" />
+			<h2>Colores</h2>
+			<span class="absolute bottom-4 bg-teal-400 right-4 text-black uppercase p-1 leading-none font-bold">Recomendaciones</span>
+		</a>
+		<a href="/assets" class="box group">
+			<img src="https://picsum.photos/960/960?random=3" alt="Recursos y assets del proyecto" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80">
+			<h2>Assets</h2>
+			<span class="absolute bottom-4 bg-orange-400 right-4 text-black uppercase p-1 leading-none font-bold">Recomendaciones</span>
+		</a>
+		<a href="/responsive" class="box group">
+			<img src="https://picsum.photos/960/960?random=3" alt="Recursos y assets del proyecto" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80">
+			<h2>Responsive</h2>
+			<span class="absolute bottom-4 bg-cyan-400 right-4 text-black uppercase p-1 leading-none font-bold">Recomendaciones</span>
+		</a>
+		<a href="/deploy" class="box group box-landscape">
+			<Image src={commits} alt="Despliegue y control de versiones" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80" />
+			<h2>Deploy</h2>
+			<span class="absolute bottom-4 bg-purple-400 right-4 text-black uppercase p-1 leading-none font-bold">Tutorial</span>
+		</a>
 	</section>
 </Layout>
