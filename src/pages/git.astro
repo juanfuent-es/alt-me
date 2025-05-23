@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AnimatedTitle from '../components/AnimatedTitle.astro';
+import { Image } from 'astro:assets';
+import styling from '../assets/styling-tailwind.png';
+import commits from '../assets/github-commits-by-ideogram.jpeg';
+---
+
+<Layout title="Documentación Git">
+	<header class="w-full h-96 flex items-center justify-center flex-col px-4">
+		<AnimatedTitle text="Git" />
+		<p class="text-center max-w-2xl mx-auto uppercase font-bold">Control de Versiones</p>
+	</header>
+
+	<section class="container mx-auto max-w-2xl">
+		<article class="py-8">
+			<h2 class="text-xl font-semibold py-8 uppercase text-center w-full">Guía de Git</h2>
+			<div class="prose prose-lg mx-auto">
+				<div class="grid gap-8">
+					<div>
+						<h3 class="text-lg font-semibold mb-4">¿Qué es Git?</h3>
+						<p>
+							Git es un sistema de control de versiones distribuido que permite el seguimiento de cambios en archivos y coordinar el trabajo entre múltiples desarrolladores.
+						</p>
+					</div>
+					<div>
+						<h3 class="text-lg font-semibold mb-4">Comandos Básicos</h3>
+						<ul class="list-disc pl-5">
+							<li><code>git init</code> - Inicializar repositorio</li>
+							<li><code>git clone</code> - Clonar repositorio</li>
+							<li><code>git add</code> - Añadir cambios</li>
+							<li><code>git commit</code> - Crear commit</li>
+							<li><code>git push</code> - Subir cambios</li>
+							<li><code>git pull</code> - Obtener cambios</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="text-lg font-semibold mb-4">Flujo de Trabajo</h3>
+						<ul class="list-disc pl-5">
+							<li>Crear rama para nueva funcionalidad</li>
+							<li>Realizar cambios y commits</li>
+							<li>Hacer merge con la rama principal</li>
+							<li>Resolver conflictos si existen</li>
+							<li>Mantener el repositorio actualizado</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="text-lg font-semibold mb-4">Buenas Prácticas</h3>
+						<ul class="list-disc pl-5">
+							<li>Commits descriptivos y atómicos</li>
+							<li>Usar ramas para nuevas características</li>
+							<li>Mantener el historial limpio</li>
+							<li>Revisar cambios antes de commitear</li>
+							<li>Usar .gitignore apropiadamente</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="text-lg font-semibold mb-4">Recursos Oficiales</h3>
+						<ul class="list-disc pl-5">
+							<li><a href="https://git-scm.com/doc" target="_blank" class="text-blue-600 hover:underline">Documentación Oficial</a></li>
+							<li><a href="https://github.com" target="_blank" class="text-blue-600 hover:underline">GitHub</a></li>
+							<li><a href="https://git-scm.com/book/es/v2" target="_blank" class="text-blue-600 hover:underline">Pro Git Book</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</article>
+	</section>
+
+	<section id="grid" class="grid grid-cols-2 lg:grid-cols-3 grid-flow-dense auto-rows-fr auto-cols-fr">
+		<a href="/tailwind" class="box group box-landscape">
+			<Image src={styling} alt="Volver a Tailwind" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80" />
+			<h2>Anterior</h2>
+			<span class="absolute bottom-4 bg-sky-400 right-4 text-black uppercase p-1 leading-none font-bold">Tailwind</span>
+		</a>
+		<a href="/deploy" class="box group">
+			<Image src={commits} alt="Siguiente: Deploy" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80" />
+			<h2>Siguiente</h2>
+			<span class="absolute bottom-4 bg-purple-400 right-4 text-black uppercase p-1 leading-none font-bold">Deploy</span>
+		</a>
+	</section>
+</Layout> 

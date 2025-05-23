@@ -1,17 +1,71 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Button from '../components/Button.astro';
 import AnimatedTitle from '../components/AnimatedTitle.astro';
+import { Image } from 'astro:assets';
+import Cover from '../assets/cover-alt-me-centro-by-ia-photoshop.jpg';
+import metadata from '../assets/metadata-centro.png';
 ---
 
-<Layout title="Acerca de Nosotros">
-  <header class="w-full h-96 flex items-center justify-center flex-col px-4">
-		<AnimatedTitle text="alt+me" />
-		<p class="text-center max-w-2xl mx-auto">Explora dentro de tu interior para crear una expresión digital de un alter-ego.</p>
-
-		<p class="text-center max-w-2xl mx-auto text-sm">
-			El proyecto combinará <b>narrativa personal</b>, <b>diseño web</b> y
-			<b>expresión creativa</b> usando tecnologías web.
-		</p>
+<Layout title="About ALT+ME">
+	<header class="w-full h-96 flex items-center justify-center flex-col px-4">
+		<AnimatedTitle text="ALT+ME" />
+		<p class="text-center max-w-2xl mx-auto uppercase font-bold">Exploración de alter-egos digitales</p>
 	</header>
+
+	<section class="container mx-auto max-w-2xl">
+		<article class="py-8">
+			<h2 class="text-xl font-semibold py-8 uppercase text-center w-full">Sobre el Proyecto</h2>
+			<div class="prose prose-lg mx-auto">
+				<p class="text-center mb-8">
+					ALT+ME es un proyecto que explora la creación y representación de identidades digitales alternativas a través del diseño web y la programación.
+				</p>
+				<div class="grid gap-8">
+					<div>
+						<h3 class="text-lg font-semibold mb-4">Objetivo</h3>
+						<p>
+							Este proyecto busca que los estudiantes desarrollen una comprensión profunda de la identidad digital y su representación en la web, combinando aspectos técnicos y creativos del desarrollo web moderno.
+						</p>
+					</div>
+					<div>
+						<h3 class="text-lg font-semibold mb-4">Tecnologías</h3>
+						<ul class="list-disc pl-5">
+							<li>Astro.js como framework principal</li>
+							<li>Tailwind CSS para estilos</li>
+							<li>HTML5 semántico</li>
+							<li>Optimización de imágenes y assets</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="text-lg font-semibold mb-4">Estructura del Proyecto</h3>
+						<ul class="list-disc pl-5">
+							<li>Página de inicio con grid de navegación</li>
+							<li>Sección de rúbrica y criterios de evaluación</li>
+							<li>Guías de buenas prácticas</li>
+							<li>Documentación de componentes y estilos</li>
+							<li>Recursos y assets optimizados</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="text-lg font-semibold mb-4">Fecha de Entrega</h3>
+						<p class="text-rose-600 font-bold">
+							Deadline: 03/06/2025
+						</p>
+					</div>
+				</div>
+			</div>
+		</article>
+	</section>
+
+	<section id="grid" class="grid grid-cols-2 lg:grid-cols-3 grid-flow-dense auto-rows-fr auto-cols-fr">
+		<a href="/" class="box group box-landscape">
+			<Image src={Cover} alt="Volver al inicio" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80" />
+			<h2>Anterior</h2>
+			<span class="absolute bottom-4 bg-rose-400 right-4 text-black uppercase p-1 leading-none font-bold">Inicio</span>
+		</a>
+		<a href="/rubrica" class="box group">
+			<Image src={metadata} alt="Rúbrica del proyecto" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80" />
+			<h2>Siguiente</h2>
+			<span class="absolute bottom-4 bg-emerald-400 right-4 text-black uppercase p-1 leading-none font-bold">Rúbrica</span>
+		</a>
+	</section>
 </Layout> 

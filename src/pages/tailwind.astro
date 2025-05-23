@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AnimatedTitle from '../components/AnimatedTitle.astro';
+import { Image } from 'astro:assets';
+import astro from '../assets/astro.webp';
+import styling from '../assets/styling-tailwind.png';
+---
+
+<Layout title="Documentación Tailwind">
+	<header class="w-full h-96 flex items-center justify-center flex-col px-4">
+		<AnimatedTitle text="Tailwind CSS" />
+		<p class="text-center max-w-2xl mx-auto uppercase font-bold">Framework CSS Utility-First</p>
+	</header>
+
+	<section class="container mx-auto max-w-2xl">
+		<article class="py-8">
+			<h2 class="text-xl font-semibold py-8 uppercase text-center w-full">Guía de Tailwind</h2>
+			<div class="prose prose-lg mx-auto">
+				<div class="grid gap-8">
+					<div>
+						<h3 class="text-lg font-semibold mb-4">¿Qué es Tailwind CSS?</h3>
+						<p>
+							Tailwind CSS es un framework CSS utility-first que permite crear diseños personalizados directamente en el HTML. Se caracteriza por su enfoque en la reutilización de clases y la flexibilidad en el diseño.
+						</p>
+					</div>
+					<div>
+						<h3 class="text-lg font-semibold mb-4">Características Principales</h3>
+						<ul class="list-disc pl-5">
+							<li>Clases utilitarias predefinidas</li>
+							<li>Diseño responsive</li>
+							<li>Personalización mediante configuración</li>
+							<li>Optimización de producción</li>
+							<li>Integración con PostCSS</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="text-lg font-semibold mb-4">Clases Comunes</h3>
+						<ul class="list-disc pl-5">
+							<li><code>flex</code> - Flexbox</li>
+							<li><code>grid</code> - CSS Grid</li>
+							<li><code>p-4</code> - Padding</li>
+							<li><code>m-4</code> - Margin</li>
+							<li><code>text-center</code> - Alineación de texto</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="text-lg font-semibold mb-4">Recursos Oficiales</h3>
+						<ul class="list-disc pl-5">
+							<li><a href="https://tailwindcss.com/docs" target="_blank" class="text-blue-600 hover:underline">Documentación Oficial</a></li>
+							<li><a href="https://tailwindui.com" target="_blank" class="text-blue-600 hover:underline">Tailwind UI</a></li>
+							<li><a href="https://play.tailwindcss.com" target="_blank" class="text-blue-600 hover:underline">Playground</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</article>
+	</section>
+
+	<section id="grid" class="grid grid-cols-2 lg:grid-cols-3 grid-flow-dense auto-rows-fr auto-cols-fr">
+		<a href="/astro" class="box group box-landscape">
+			<Image src={astro} alt="Volver a Astro" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80" />
+			<h2>Anterior</h2>
+			<span class="absolute bottom-4 bg-violet-400 right-4 text-black uppercase p-1 leading-none font-bold">Astro</span>
+		</a>
+		<a href="/git" class="box group">
+			<Image src={styling} alt="Siguiente: Git" class="group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80" />
+			<h2>Siguiente</h2>
+			<span class="absolute bottom-4 bg-orange-400 right-4 text-black uppercase p-1 leading-none font-bold">Git</span>
+		</a>
+	</section>
+</Layout> 
