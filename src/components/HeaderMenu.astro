@@ -46,20 +46,17 @@ import NavLink from './NavLink.astro';
     </svg>
   </button>
 
-  <nav class="text-center absolute top-0 left-0 w-full h-full">
-    <menu class="space-y-8 flex items-center justify-center h-full w-full flex-col">
-      <NavLink href="/">Inicio</NavLink>
-      <NavLink href="/about">Sobre el proyecto</NavLink>
-      <NavLink href="/rubrica">Rúbrica</NavLink>
-      <NavLink href="/metadata">Markup / Metadata</NavLink>
-      <NavLink href="/styling">Styling</NavLink>
-      <NavLink href="https://docs.astro.build/es/basics/astro-components/">Components</NavLink>
-      <NavLink href="/markup">Tipografía</NavLink>
-      <NavLink href="/colores">Colores</NavLink>
-      <NavLink href="/assets">Assets</NavLink>
-      <NavLink href="/deploy">Deploy</NavLink>
-    </menu>
-  </nav>
+  <menu class="grid grid-rows-3 grid-cols-3 grid-flow-dense auto-rows-fr auto-cols-fr absolute top-0 left-0 w-full h-full uppercase font-bold">
+    <a href="/rubrica" class="bg-rose-400 hover:bg-rose-600 p-0 m-0 flex items-center justify-center">Rúbrica</a>
+    <a href="/metadata" class="bg-emerald-400 hover:bg-emerald-600 p-0 m-0 flex items-center justify-center">HTML</a>
+    <a href="/styling" class="bg-amber-400 hover:bg-amber-600 p-0 m-0 flex items-center justify-center">Styling</a>
+    <a href="https://docs.astro.build/es/basics/astro-components/" class="bg-violet-400 hover:bg-violet-600 p-0 m-0 flex items-center justify-center">Componentes</a>
+    <a href="/markup" class="bg-sky-400 hover:bg-sky-600 p-0 m-0 flex items-center justify-center">Tipografía</a>
+    <a href="/colores" class="bg-teal-400 hover:bg-teal-600 p-0 m-0 flex items-center justify-center">Colores</a>
+    <a href="/assets" class="bg-orange-400 hover:bg-orange-600 p-0 m-0 flex items-center justify-center">Assets</a>
+    <a href="/responsive" class="bg-cyan-400 hover:bg-cyan-600 p-0 m-0 flex items-center justify-center">Responsive</a>
+    <a href="/deploy" class="bg-purple-400 hover:bg-purple-600 p-0 m-0 flex items-center justify-center">Deploy</a>
+  </menu>
 </div>
 
 <script>
