@@ -1,7 +1,7 @@
 ---
 import Footer from '../components/Footer.astro';
 import Head from '../components/Head.astro';
-import Header from '../components/Header.astro';
+import HeaderMenu from '../components/HeaderMenu.astro';
 import Preloader from '../components/Preloader.astro';
 import '../styles/global.css';
 
@@ -18,7 +18,7 @@ const { title, description } = Astro.props;
 	<Head title={title} description={description} />
 	<body class="min-h-screen text-gray-900 dark:text-gray-100">
 		<Preloader />
-		<Header />
+		<HeaderMenu />
 		<main class="flex-grow bg-white dark:bg-black">
 			<slot />
 		</main>

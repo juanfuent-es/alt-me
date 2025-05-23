@@ -6,6 +6,8 @@ import { Image } from 'astro:assets';
 import typography from '../assets/typography-by-brett-jordan-92-unsplash.jpg';
 import colores from '../assets/colors-balazs-ketyi-unsplash.jpg';
 import metadata from '../assets/metadata-centro.png';
+import styling from '../assets/styling-tailwind.png';
+import astro from '../assets/astro.webp';
 import commits from '../assets/github-commits-by-ideogram.jpeg';
 import Cover from '../assets/cover-alt-me-centro-by-ia-photoshop.jpg';
 ---
@@ -24,6 +26,18 @@ import Cover from '../assets/cover-alt-me-centro-by-ia-photoshop.jpg';
 				<h2>Rúbrica</h2>
 				<Image src={Cover} alt="Cover" class="w-full group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80 h-full object-cover absolute top-0 left-0 object-center" />
 			</a>
+			<a href="/metadata" class="box">
+				<Image src={metadata} alt="Metadata" />
+				<h2>Markup / Metadata</h2>
+			</a>
+			<a href="/styling" class="box">
+				<Image src={styling} alt="Styling" />
+				<h2>Styling</h2>
+			</a>
+			<a href="https://docs.astro.build/es/basics/astro-components/" class="box">
+				<Image src={astro} alt="Astro Components" />
+				<h2>Components</h2>
+			</a>
 			<a href="/markup" class="box">
 				<Image src={typography} alt="Foto por Brett Jordan, Unsplash" />
 				<h2>Tipografía</h2>
@@ -37,10 +51,6 @@ import Cover from '../assets/cover-alt-me-centro-by-ia-photoshop.jpg';
 				<footer class="absolute bottom-0 left-0 bg-black text-white p-2">
 					<p>Foto por Balázs Kétyi, Unsplash</p>
 				</footer>
-			</a>
-			<a href="/metadata" class="box">
-				<Image src={metadata} alt="Metadata" />
-				<h2>Metadata</h2>
 			</a>
 			<a href="/assets" class="box">
 				<img src="https://picsum.photos/960/960?random=3" alt="Foto de Balázs Kétyi">
