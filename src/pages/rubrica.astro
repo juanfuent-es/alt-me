@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Rúbrica de Evaluación">
+	<main class="container mx-auto px-4 py-8">
+		<h1 class="text-4xl font-bold mb-8">Rúbrica de Evaluación del Proyecto Final</h1>
+		
+		<section class="mb-12">
+			<h2 class="text-2xl font-semibold mb-4">Criterios de Evaluación</h2>
+			<div class="grid gap-6">
+				<div class="bg-white p-6 rounded-lg shadow-md">
+					<h3 class="text-xl font-semibold mb-3">Diseño y Estética (30%)</h3>
+					<ul class="list-disc pl-6 space-y-2">
+						<li>Coherencia visual y uso efectivo de la tipografía</li>
+						<li>Paleta de colores armoniosa y significativa</li>
+						<li>Diseño responsive y adaptativo</li>
+						<li>Calidad y optimización de imágenes</li>
+					</ul>
+				</div>
+
+				<div class="bg-white p-6 rounded-lg shadow-md">
+					<h3 class="text-xl font-semibold mb-3">Funcionalidad (30%)</h3>
+					<ul class="list-disc pl-6 space-y-2">
+						<li>Navegación intuitiva y accesible</li>
+						<li>Rendimiento y velocidad de carga</li>
+						<li>Compatibilidad cross-browser</li>
+						<li>Implementación correcta de features</li>
+					</ul>
+				</div>
+
+				<div class="bg-white p-6 rounded-lg shadow-md">
+					<h3 class="text-xl font-semibold mb-3">Código y Estructura (20%)</h3>
+					<ul class="list-disc pl-6 space-y-2">
+						<li>Organización del código y buenas prácticas</li>
+						<li>Uso correcto de HTML semántico</li>
+						<li>Optimización de assets y recursos</li>
+						<li>Documentación del proyecto</li>
+					</ul>
+				</div>
+
+				<div class="bg-white p-6 rounded-lg shadow-md">
+					<h3 class="text-xl font-semibold mb-3">Creatividad e Innovación (20%)</h3>
+					<ul class="list-disc pl-6 space-y-2">
+						<li>Originalidad en la propuesta</li>
+						<li>Implementación de features innovadoras</li>
+						<li>Experiencia de usuario única</li>
+						<li>Resolución creativa de problemas</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="mb-12">
+			<h2 class="text-2xl font-semibold mb-4">Recursos de Referencia</h2>
+			<div class="grid gap-4">
+				<a href="https://www.w3.org/WAI/standards-guidelines/wcag/" class="text-blue-600 hover:underline" target="_blank">
+					WCAG Guidelines - Accesibilidad Web
+				</a>
+				<a href="https://developer.mozilla.org/es/docs/Web/HTML" class="text-blue-600 hover:underline" target="_blank">
+					MDN Web Docs - HTML
+				</a>
+				<a href="https://developer.mozilla.org/es/docs/Web/CSS" class="text-blue-600 hover:underline" target="_blank">
+					MDN Web Docs - CSS
+				</a>
+			</div>
+		</section>
+
+		<section>
+			<h2 class="text-2xl font-semibold mb-4">Fechas Importantes</h2>
+			<div class="bg-white p-6 rounded-lg shadow-md">
+				<ul class="list-disc pl-6 space-y-2">
+					<li>Entrega del Proyecto: 03/06/2025</li>
+					<li>Presentación: 05/06/2025</li>
+					<li>Revisión Final: 07/06/2025</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+</Layout>
+

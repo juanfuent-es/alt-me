@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Tipografía">
+	<main class="container mx-auto px-4 py-8">
+		<h1 class="text-4xl font-bold mb-8">Guía de Tipografía Web</h1>
+
+		<section class="mb-12">
+			<h2 class="text-2xl font-semibold mb-4">Principios Básicos</h2>
+			<div class="grid gap-6">
+				<div class="p-6 rounded-lg shadow-md">
+					<h3 class="text-xl font-semibold mb-3">Jerarquía Tipográfica</h3>
+					<ul class="list-disc pl-6 space-y-2">
+						<li>Utiliza diferentes tamaños para crear jerarquía visual</li>
+						<li>Mantén una escala consistente (1.2 - 1.5 ratio)</li>
+						<li>Define claramente los estilos para headings (h1-h6)</li>
+						<li>Establece un tamaño base para el texto (16px recomendado)</li>
+					</ul>
+				</div>
+
+				<div class="p-6 rounded-lg shadow-md">
+					<h3 class="text-xl font-semibold mb-3">Legibilidad</h3>
+					<ul class="list-disc pl-6 space-y-2">
+						<li>Mantén un contraste adecuado (mínimo 4.5:1)</li>
+						<li>Usa longitudes de línea óptimas (50-75 caracteres)</li>
+						<li>Espaciado entre líneas (line-height) de 1.5-1.6</li>
+						<li>Evita justificar el texto en la web</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="mb-12">
+			<h2 class="text-2xl font-semibold mb-4">Recursos y Herramientas</h2>
+			<div class="grid gap-4">
+				<a href="https://fonts.google.com/" class="text-blue-600 hover:underline" target="_blank">
+					Google Fonts - Biblioteca de fuentes gratuitas
+				</a>
+				<a href="https://www.fontpair.co/" class="text-blue-600 hover:underline" target="_blank">
+					FontPair - Combinaciones de fuentes
+				</a>
+				<a href="https://type-scale.com/" class="text-blue-600 hover:underline" target="_blank">
+					Type Scale - Calculadora de escalas tipográficas
+				</a>
+				<a href="https://www.modularscale.com/" class="text-blue-600 hover:underline" target="_blank">
+					Modular Scale - Herramienta de escalas modulares
+				</a>
+			</div>
+		</section>
+
+		<section class="mb-12">
+			<h2 class="text-2xl font-semibold mb-4">Implementación en Astro</h2>
+			<div class="p-6 rounded-lg shadow-md">
+				<pre class="p-4 rounded overflow-x-auto">				</pre>
+			</div>
+		</section>
+
+		<section>
+			<h2 class="text-2xl font-semibold mb-4">Buenas Prácticas</h2>
+			<div class="p-6 rounded-lg shadow-md">
+				<ul class="list-disc pl-6 space-y-2">
+					<li>Utiliza variables CSS para mantener consistencia</li>
+					<li>Implementa fallback fonts para mejor rendimiento</li>
+					<li>Optimiza la carga de fuentes con font-display</li>
+					<li>Considera la accesibilidad en tus elecciones tipográficas</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+</Layout>
+

@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Metadata">
+	<main class="container mx-auto px-4 py-8">
+		<h1 class="text-4xl font-bold mb-8">Guía de Metadata y SEO</h1>
+
+		<section class="mb-12">
+			<h2 class="text-2xl font-semibold mb-4">Metadata Básica</h2>
+			<div class="grid gap-6">
+				<div class="bg-white p-6 rounded-lg shadow-md">
+					<h3 class="text-xl font-semibold mb-3">Meta Tags Esenciales</h3>
+					<pre class="bg-gray-100 p-4 rounded overflow-x-auto">
+						<code>
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;meta name="description" content="Descripción de tu página"&gt;
+&lt;meta name="keywords" content="palabras, clave, separadas, por, comas"&gt;
+&lt;meta name="author" content="Tu Nombre"&gt;
+						</code>
+					</pre>
+				</div>
+
+				<div class="bg-white p-6 rounded-lg shadow-md">
+					<h3 class="text-xl font-semibold mb-3">Open Graph Tags</h3>
+					<pre class="bg-gray-100 p-4 rounded overflow-x-auto">
+						<code>
+&lt;meta property="og:title" content="Título de la página"&gt;
+&lt;meta property="og:description" content="Descripción para redes sociales"&gt;
+&lt;meta property="og:image" content="URL de la imagen"&gt;
+&lt;meta property="og:url" content="URL de la página"&gt;
+&lt;meta property="og:type" content="website"&gt;
+						</code>
+					</pre>
+				</div>
+			</div>
+		</section>
+
+		<section class="mb-12">
+			<h2 class="text-2xl font-semibold mb-4">Implementación en Astro</h2>
+			<div class="bg-white p-6 rounded-lg shadow-md">
+				<pre class="bg-gray-100 p-4 rounded overflow-x-auto">
+					<code>
+---
+// En tu archivo .astro
+const title = "Título de la página";
+const description = "Descripción de la página";
+const image = "/ruta/a/tu/imagen.jpg";
+---
+
+&lt;head&gt;
+  &lt;title&gt;{title}&lt;/title&gt;
+  &lt;meta name="description" content={description}&gt;
+  
+  &lt;!-- Open Graph / Facebook --&gt;
+  &lt;meta property="og:type" content="website"&gt;
+  &lt;meta property="og:title" content={title}&gt;
+  &lt;meta property="og:description" content={description}&gt;
+  &lt;meta property="og:image" content={image}&gt;
+  
+  &lt;!-- Twitter --&gt;
+  &lt;meta name="twitter:card" content="summary_large_image"&gt;
+  &lt;meta name="twitter:title" content={title}&gt;
+  &lt;meta name="twitter:description" content={description}&gt;
+  &lt;meta name="twitter:image" content={image}&gt;
+&lt;/head&gt;
+					</code>
+				</pre>
+			</div>
+		</section>
+
+		<section class="mb-12">
+			<h2 class="text-2xl font-semibold mb-4">Herramientas de SEO</h2>
+			<div class="grid gap-4">
+				<a href="https://developers.google.com/search/docs" class="text-blue-600 hover:underline" target="_blank">
+					Google Search Central - Documentación oficial
+				</a>
+				<a href="https://metatags.io/" class="text-blue-600 hover:underline" target="_blank">
+					Meta Tags - Generador de meta tags
+				</a>
+				<a href="https://www.heymeta.com/" class="text-blue-600 hover:underline" target="_blank">
+					Hey Meta - Validador de meta tags
+				</a>
+				<a href="https://www.schema.org/" class="text-blue-600 hover:underline" target="_blank">
+					Schema.org - Marcado estructurado
+				</a>
+			</div>
+		</section>
+
+		<section>
+			<h2 class="text-2xl font-semibold mb-4">Buenas Prácticas</h2>
+			<div class="bg-white p-6 rounded-lg shadow-md">
+				<ul class="list-disc pl-6 space-y-2">
+					<li>Escribe descripciones únicas para cada página</li>
+					<li>Mantén los títulos entre 50-60 caracteres</li>
+					<li>Usa URLs amigables y descriptivas</li>
+					<li>Implementa marcado estructurado (Schema.org)</li>
+					<li>Optimiza las imágenes con alt text descriptivo</li>
+					<li>Mantén un tiempo de carga rápido</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+</Layout>
+

@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Assets">
+	<section class="container mx-auto px-4 py-8">
+		<h1 class="text-4xl font-bold mb-8">Gestión de Assets</h1>
+
+		<section class="mb-12">
+			<h2 class="text-2xl font-semibold mb-4">Optimización de Imágenes</h2>
+			<div class="grid gap-6">
+				<div class="bg-white p-6 rounded-lg shadow-md">
+					<h3 class="text-xl font-semibold mb-3">Formatos Recomendados</h3>
+					<ul class="list-disc pl-6 space-y-2">
+						<li>WebP: Mejor compresión, soporte moderno</li>
+						<li>AVIF: Última generación, excelente compresión</li>
+						<li>JPEG: Para fotografías</li>
+						<li>PNG: Para gráficos con transparencia</li>
+						<li>SVG: Para iconos y gráficos vectoriales</li>
+					</ul>
+				</div>
+
+				<div class="bg-white p-6 rounded-lg shadow-md">
+					<h3 class="text-xl font-semibold mb-3">Tamaños Recomendados</h3>
+					<ul class="list-disc pl-6 space-y-2">
+						<li>Imágenes de héroe: 1920x1080px</li>
+						<li>Miniaturas: 400x400px</li>
+						<li>Iconos: 24x24px o 32x32px</li>
+						<li>Favicon: 32x32px</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="mb-12">
+			<h2 class="text-2xl font-semibold mb-4">Herramientas de Optimización</h2>
+			<div class="grid gap-4">
+				<a href="https://squoosh.app/" class="text-blue-600 hover:underline" target="_blank">
+					Squoosh - Optimizador de imágenes de Google
+				</a>
+				<a href="https://tinypng.com/" class="text-blue-600 hover:underline" target="_blank">
+					TinyPNG - Compresor de imágenes
+				</a>
+				<a href="https://svgomg.net/" class="text-blue-600 hover:underline" target="_blank">
+					SVGOMG - Optimizador de SVGs
+				</a>
+				<a href="https://www.vectorizer.ai/" class="text-blue-600 hover:underline" target="_blank">
+					Vectorizer - Conversor de imágenes a vector
+				</a>
+			</div>
+		</section>
+
+		<section class="mb-12">
+			<h2 class="text-2xl font-semibold mb-4">Implementación en Astro</h2>
+			<div class="bg-white p-6 rounded-lg shadow-md">
+				<pre class="bg-gray-100 p-4 rounded overflow-x-auto">
+					<code>
+---
+import { Image } from 'astro:assets';
+import myImage from '../assets/my-image.jpg';
+---
+
+&lt;Image
+  src={myImage}
+  alt="Descripción de la imagen"
+  width={800}
+  height={600}
+  format="webp"
+  quality={80}
+/&gt;
+					</code>
+				</pre>
+			</div>
+		</section>
+
+		<section class="mb-12">
+			<h2 class="text-2xl font-semibold mb-4">Estructura de Directorios</h2>
+			<div class="bg-white p-6 rounded-lg shadow-md">
+				<pre class="bg-gray-100 p-4 rounded overflow-x-auto">
+					<code>
+src/
+├── assets/
+│   ├── images/
+│   │   ├── hero/
+│   │   ├── icons/
+│   │   └── backgrounds/
+│   ├── fonts/
+│   └── videos/
+└── public/
+    └── favicon.ico
+					</code>
+				</pre>
+			</div>
+		</section>
+
+		<section>
+			<h2 class="text-2xl font-semibold mb-4">Buenas Prácticas</h2>
+			<div class="bg-white p-6 rounded-lg shadow-md">
+				<ul class="list-disc pl-6 space-y-2">
+					<li>Usa nombres descriptivos para los archivos</li>
+					<li>Implementa lazy loading para imágenes</li>
+					<li>Proporciona siempre texto alternativo</li>
+					<li>Utiliza srcset para imágenes responsivas</li>
+					<li>Mantén una estructura de directorios organizada</li>
+					<li>Optimiza los assets antes de subirlos</li>
+				</ul>
+			</div>
+		</section>
+	</section>
+</Layout>

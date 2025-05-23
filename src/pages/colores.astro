@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Colores">
+	<main class="container mx-auto px-4 py-8">
+		<h1 class="text-4xl font-bold mb-8">Guía de Color en Diseño Web</h1>
+
+		<section class="mb-12">
+			<h2 class="text-2xl font-semibold mb-4">Teoría del Color</h2>
+			<div class="grid gap-6">
+				<div class="bg-white p-6 rounded-lg shadow-md">
+					<h3 class="text-xl font-semibold mb-3">Paletas de Color</h3>
+					<ul class="list-disc pl-6 space-y-2">
+						<li>Color primario: Define la identidad de tu marca</li>
+						<li>Color secundario: Complementa al primario</li>
+						<li>Color de acento: Destaca elementos importantes</li>
+						<li>Colores neutros: Para fondos y texto</li>
+					</ul>
+				</div>
+
+				<div class="bg-white p-6 rounded-lg shadow-md">
+					<h3 class="text-xl font-semibold mb-3">Psicología del Color</h3>
+					<ul class="list-disc pl-6 space-y-2">
+						<li>Azul: Confianza, seguridad, profesionalismo</li>
+						<li>Rojo: Energía, pasión, urgencia</li>
+						<li>Verde: Crecimiento, salud, naturaleza</li>
+						<li>Amarillo: Optimismo, claridad, calidez</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="mb-12">
+			<h2 class="text-2xl font-semibold mb-4">Herramientas de Color</h2>
+			<div class="grid gap-4">
+				<a href="https://coolors.co/" class="text-blue-600 hover:underline" target="_blank">
+					Coolors - Generador de paletas de color
+				</a>
+				<a href="https://colorhunt.co/" class="text-blue-600 hover:underline" target="_blank">
+					Color Hunt - Paletas de color populares
+				</a>
+				<a href="https://color.adobe.com/" class="text-blue-600 hover:underline" target="_blank">
+					Adobe Color - Herramienta profesional de color
+				</a>
+				<a href="https://www.colorzilla.com/" class="text-blue-600 hover:underline" target="_blank">
+					ColorZilla - Selector de color para navegadores
+				</a>
+			</div>
+		</section>
+
+		<section class="mb-12">
+			<h2 class="text-2xl font-semibold mb-4">Implementación en CSS</h2>
+			<div class="bg-white p-6 rounded-lg shadow-md">
+				<pre class="bg-gray-100 p-4 rounded overflow-x-auto">
+					<code>
+:root {
+  /* Colores principales */
+  --color-primary: #2563eb;
+  --color-secondary: #7c3aed;
+  --color-accent: #f59e0b;
+  
+  /* Colores neutros */
+  --color-background: #ffffff;
+  --color-text: #1f2937;
+  --color-text-light: #6b7280;
+  
+  /* Estados */
+  --color-success: #10b981;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+}
+					</code>
+				</pre>
+			</div>
+		</section>
+
+		<section>
+			<h2 class="text-2xl font-semibold mb-4">Buenas Prácticas</h2>
+			<div class="bg-white p-6 rounded-lg shadow-md">
+				<ul class="list-disc pl-6 space-y-2">
+					<li>Mantén un contraste mínimo de 4.5:1 para texto</li>
+					<li>Usa variables CSS para mantener consistencia</li>
+					<li>Considera el modo oscuro en tu paleta</li>
+					<li>Prueba tu paleta con usuarios daltónicos</li>
+					<li>Limita tu paleta a 3-5 colores principales</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+</Layout>
+

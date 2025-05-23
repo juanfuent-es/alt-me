@@ -7,16 +7,14 @@ interface Props {
 const { text, class: className = '' } = Astro.props;
 ---
 
-<header class="text-center">
-    <h1 class={`animated-title text-7xl text-center mx-auto font-bold ${className}`}>
-        {text.split('').map((char, index) => (
-            <div class="char-container" data-char={char}>
-                <span class="char char-1">{char}</span>
-                <span class="char char-2">{char}</span>
-            </div>
-        ))}
-    </h1>
-</header>
+<h1 class={`animated-title text-4xl md:text-6xl lg:text-8xl text-center mx-auto font-bold ${className}`}>
+    {text.split('').map((char, index) => (
+        <div class="char-container" data-char={char}>
+            <span class="char char-1">{char}</span>
+            <span class="char char-2">{char}</span>
+        </div>
+    ))}
+</h1>
 
 <script>
     import { gsap } from 'gsap';
@@ -26,10 +24,10 @@ const { text, class: className = '' } = Astro.props;
         constructor() {
             this.container = document.querySelector('.animated-title');
             this.chars = this.container?.querySelectorAll('.char-container');
-            this.char_duration = .5;
+            this.duration = .5; // segundos de duración de animación por caracter
             this.timeline = gsap.timeline({
                 paused: true,
-                repeat: -1,
+                // repeat: -1, // Infinito
                 defaults: {
                     ease: "power2.inOut"
                 }
@@ -38,13 +36,21 @@ const { text, class: className = '' } = Astro.props;
         }
 
         init() {
-            if (!this.container || !this.chars?.length) return;
-            this.setupInitialState();
+            this.setup();
             this.createAnimation();
-            this.timeline.duration(1).play();
+            this.events();
         }
 
-        setupInitialState() {
+        events() {
+            this.container?.addEventListener('mouseenter', () => {
+                this.timeline.play();
+            });
+            this.container?.addEventListener('mouseleave', () => {
+                this.timeline.reverse();
+            });
+        }
+
+        setup() {
             // Posicionar el segundo carácter debajo
             gsap.set(this.chars, {
                 position: 'relative',
@@ -65,20 +71,17 @@ const { text, class: className = '' } = Astro.props;
                 const char1 = charContainer.querySelector('.char-1');
                 const char2 = charContainer.querySelector('.char-2');
 
-                if (!char1 || !char2) return;
-
-                // Agregar la animación al timeline con stagger
                 this.timeline
                     .to(char1, {
                         y: "-100%",
-                        duration: this.char_duration,
+                        duration: this.duration,
                         ease: "power2.inOut"
-                    }, index * .1)
+                    }, index * .1) // Tiempo en el timeline en el que aparecerá la animación del primer caracter
                     .to(char2, {
                         y: "0%",
-                        duration: this.char_duration,
+                        duration: this.duration,
                         ease: "power2.inOut"
-                    }, index * .1)
+                    }, index * .1) // Tiempo en el timeline en el que aparecerá la animación del segundo caracter
             });
         }
 

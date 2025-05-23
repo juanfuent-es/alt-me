@@ -1,17 +1,55 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Button from '../components/Button.astro';
 import AnimatedTitle from '../components/AnimatedTitle.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// import images from assets directory
+import { Image } from 'astro:assets';
+import typography from '../assets/typography-by-brett-jordan-92-unsplash.jpg';
+import colores from '../assets/colors-balazs-ketyi-unsplash.jpg';
+import metadata from '../assets/metadata-centro.png';
+import commits from '../assets/github-commits-by-ideogram.jpeg';
+import Cover from '../assets/cover-alt-me-centro-by-ia-photoshop.jpg';
 ---
 
 <Layout title="Bienvenido">
-	<div class="mx-auto px-6 py-12 bg-amber-400 h-96 text-center">
-		<AnimatedTitle text="ALT+ME" />
-		<p class="text-lg text-gray-600 mb-8">
-			Exploración de una identidad alternativa a través de tecnologías web
-		</p>
-	</div>
+	<section id="grid" class="w-full text-left">
+		<div class="grid grid-cols-2 lg:grid-cols-3 grid-flow-dense auto-rows-fr auto-cols-fr">
+			<a href="/about" class="box box-landscape flex items-center justify-center flex-col" title="Información del proyecto">
+				<AnimatedTitle text="ALT+ME"/>
+				<p class="mt-0 mb-2 text-lg font-medium text-pretty uppercase opacity-80 text-center">
+					Exploración de alter-egos digitales
+					<small class="block">Proyecto Final 💀 Deadline 03/06/2025</small>
+				</p>
+			</a>
+			<a href="/rubrica" class="box group">
+				<h2>Rúbrica</h2>
+				<Image src={Cover} alt="Cover" class="w-full group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 opacity-80 h-full object-cover absolute top-0 left-0 object-center" />
+			</a>
+			<a href="/markup" class="box">
+				<Image src={typography} alt="Foto por Brett Jordan, Unsplash" />
+				<h2>Tipografía</h2>
+				<footer class="absolute bottom-0 left-0 bg-black text-white p-2">
+					<p>Foto por Brett Jordan, Unsplash</p>
+				</footer>
+			</a>
+			<a href="/colores" class="box">
+				<Image src={colores} alt="Foto de Balázs Kétyi" />
+				<h2>Colores</h2>
+				<footer class="absolute bottom-0 left-0 bg-black text-white p-2">
+					<p>Foto por Balázs Kétyi, Unsplash</p>
+				</footer>
+			</a>
+			<a href="/metadata" class="box">
+				<Image src={metadata} alt="Metadata" />
+				<h2>Metadata</h2>
+			</a>
+			<a href="/assets" class="box">
+				<img src="https://picsum.photos/960/960?random=3" alt="Foto de Balázs Kétyi">
+				<h2>Assets</h2>
+			</a>
+			<a href="/deploy" class="box">
+				<Image src={commits} alt="Metadata" />
+				<h2>Deploy</h2>
+			</a>
+		</div>
+	</section>
 </Layout>

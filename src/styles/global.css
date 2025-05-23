@@ -16,7 +16,31 @@
 }
 
 @layer components {
-    
+    .box {
+        @apply relative overflow-hidden col-span-1 row-span-1 aspect-square p-4 z-0;
+    }      
+    .box-wide {
+        @apply col-span-3 row-span-1;
+        aspect-ratio: 3 / 1; /* cuadrado full width */
+    } 
+    .box-double {
+        @apply col-span-2 row-span-2;
+        aspect-ratio: 2 / 2; /* cuadrado grande */
+    } 
+    .box-portrait {
+        @apply col-span-1 row-span-2;
+        aspect-ratio: 1 / 2; /* vertical */
+    } 
+    .box-landscape {
+        @apply col-span-2 row-span-1;
+        aspect-ratio: 2 / 1; /* horizontal */
+    }
+    .box img {
+        @apply w-full h-full object-cover absolute inset-0 -z-10;
+    }
+    .box h2 {
+        @apply inline-block bg-black text-white py-2 max-w-2/3 px-4 font-bold text-3xl leading-none;
+    }
 }
 
 @layer utilities {
