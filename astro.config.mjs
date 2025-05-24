@@ -5,11 +5,9 @@ export default defineConfig({
   site: "https://juanfuent-es.github.io/alt-me",
   base: "/alt-me",
   trailingSlash: "never",
+  outDir: "docs",
   vite: {
-    plugins: [tailwindcss()],
-    build: {
-      assetsDir: "alt-me/_astro"
-    }
+    plugins: [tailwindcss()]
   },
   typescript: {
     strict: false,
