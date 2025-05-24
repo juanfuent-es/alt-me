@@ -1,7 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import centroFlagLoop from '../assets/centro-flag-loop.webp';
+---
+
 <div id="preloader" class="fixed inset-0 bg-white dark:bg-black z-50 flex items-center justify-center">
     <div class="logo-container">
-        <img 
-            src="/centro-flag-loop.webp" 
+        <Image 
+            src={centroFlagLoop} 
             alt="CENTRO Diseño, Cine, Televisión | Logotipo" 
             class="w-36"
         />
