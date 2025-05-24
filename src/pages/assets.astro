@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageNavigation from '../components/PageNavigation.astro';
+import {Image} from 'astro:assets';
 ---
 
 <Layout title="Assets">
@@ -54,21 +55,21 @@ import PageNavigation from '../components/PageNavigation.astro';
 		<section class="mb-12">
 			<h2 class="text-2xl font-semibold mb-4">Implementación en Astro</h2>
 			<div class="bg-white p-6 rounded-lg shadow-md">
-				<pre class="bg-gray-100 p-4 rounded overflow-x-auto">
-					<code>
----
+				<pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded overflow-x-auto">
+					<code class="block text-sm">
+{`---
 import { Image } from 'astro:assets';
 import myImage from '../assets/my-image.jpg';
 ---
 
-&lt;Image
+<Image
   src={myImage}
   alt="Descripción de la imagen"
   width={800}
   height={600}
   format="webp"
   quality={80}
-/&gt;
+/>`}
 					</code>
 				</pre>
 			</div>
@@ -77,8 +78,8 @@ import myImage from '../assets/my-image.jpg';
 		<section class="mb-12">
 			<h2 class="text-2xl font-semibold mb-4">Estructura de Directorios</h2>
 			<div class="bg-white p-6 rounded-lg shadow-md">
-				<pre class="bg-gray-100 p-4 rounded overflow-x-auto">
-					<code>
+				<pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded overflow-x-auto">
+					<code class="block text-sm">
 src/
 ├── assets/
 │   ├── images/

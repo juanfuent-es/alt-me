@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import PageNavigation from '../components/PageNavigation.astro';
 ---
 
-<Layout title="Metadata">
+<Layout title="Metadata y SEO">
 	<main class="container mx-auto px-4 py-8">
 		<h1 class="text-4xl font-bold mb-8">Guía de Metadata y SEO</h1>
 
@@ -12,26 +12,26 @@ import PageNavigation from '../components/PageNavigation.astro';
 			<div class="grid gap-6">
 				<article class="bg-white p-6 rounded-lg shadow-md">
 					<h3 class="text-xl font-semibold mb-3">Meta Tags Esenciales</h3>
-					<pre class="bg-gray-100 p-4 rounded overflow-x-auto">
-						<code>
-&lt;meta charset="UTF-8"&gt;
-&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-&lt;meta name="description" content="Descripción de tu página"&gt;
-&lt;meta name="keywords" content="palabras, clave, separadas, por, comas"&gt;
-&lt;meta name="author" content="Tu Nombre"&gt;
+					<pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded overflow-x-auto">
+						<code class="block text-sm">
+{`<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Descripción de tu página">
+<meta name="keywords" content="palabras, clave, separadas, por, comas">
+<meta name="author" content="Tu Nombre">`}
 						</code>
 					</pre>
 				</article>
 
 				<article class="bg-white p-6 rounded-lg shadow-md">
 					<h3 class="text-xl font-semibold mb-3">Open Graph Tags</h3>
-					<pre class="bg-gray-100 p-4 rounded overflow-x-auto">
-						<code>
-&lt;meta property="og:title" content="Título de la página"&gt;
-&lt;meta property="og:description" content="Descripción para redes sociales"&gt;
-&lt;meta property="og:image" content="URL de la imagen"&gt;
-&lt;meta property="og:url" content="URL de la página"&gt;
-&lt;meta property="og:type" content="website"&gt;
+					<pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded overflow-x-auto">
+						<code class="block text-sm">
+{`<meta property="og:title" content="Título de la página">
+<meta property="og:description" content="Descripción para redes sociales">
+<meta property="og:image" content="URL de la imagen">
+<meta property="og:url" content="URL de la página">
+<meta property="og:type" content="website">`}
 						</code>
 					</pre>
 				</article>
@@ -41,31 +41,31 @@ import PageNavigation from '../components/PageNavigation.astro';
 		<section class="mb-12">
 			<h2 class="text-2xl font-semibold mb-4">Implementación en Astro</h2>
 			<article class="bg-white p-6 rounded-lg shadow-md">
-				<pre class="bg-gray-100 p-4 rounded overflow-x-auto">
-					<code>
----
+				<pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded overflow-x-auto">
+					<code class="block text-sm">
+{`---
 // En tu archivo .astro
 const title = "Título de la página";
 const description = "Descripción de la página";
 const image = "/ruta/a/tu/imagen.jpg";
 ---
 
-&lt;head&gt;
-  &lt;title&gt;{title}&lt;/title&gt;
-  &lt;meta name="description" content={description}&gt;
+<head>
+  <title>{title}</title>
+  <meta name="description" content={description}>
   
-  &lt;!-- Open Graph / Facebook --&gt;
-  &lt;meta property="og:type" content="website"&gt;
-  &lt;meta property="og:title" content={title}&gt;
-  &lt;meta property="og:description" content={description}&gt;
-  &lt;meta property="og:image" content={image}&gt;
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content={image}>
   
-  &lt;!-- Twitter --&gt;
-  &lt;meta name="twitter:card" content="summary_large_image"&gt;
-  &lt;meta name="twitter:title" content={title}&gt;
-  &lt;meta name="twitter:description" content={description}&gt;
-  &lt;meta name="twitter:image" content={image}&gt;
-&lt;/head&gt;
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={image}>
+</head>`}
 					</code>
 				</pre>
 			</article>
