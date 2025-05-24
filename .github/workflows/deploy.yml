@@ -29,6 +29,8 @@ jobs:
         run: npm install
       - name: Build with Astro
         run: npm run build
+      - name: Create .nojekyll file
+        run: touch ./docs/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
