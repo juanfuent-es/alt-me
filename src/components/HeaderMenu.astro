@@ -1,5 +1,7 @@
 ---
 import NavLink from './NavLink.astro';
+import { Image } from 'astro:assets';
+import centroLogo from '../assets/centro-logo.svg';
 ---
 
 <header class="bg-white text-black dark:bg-black dark:text-white">
@@ -9,9 +11,9 @@ import NavLink from './NavLink.astro';
         href="/"
         class="inline-block transition-all cursor-pointer hover:scale-105"
       >
-        <img
-          src="/centro-logo.svg"
-          alt="CENTRO Diseño, Cine, Televisión | Logotipo"
+        <Image 
+          src={centroLogo} 
+          alt="CENTRO Diseño, Cine, Televisión | Logotipo" 
         />
       </a>
 
