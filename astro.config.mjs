@@ -6,7 +6,10 @@ export default defineConfig({
   base: "/",
   trailingSlash: "never",
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    build: {
+      assetsDir: "alt-me"
+    }
   },
   typescript: {
     strict: false,
