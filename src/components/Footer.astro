@@ -1,5 +1,7 @@
 ---
 import SocialIcon from './SocialIcon.astro';
+import { Image } from 'astro:assets';
+import centroFlagLoop from '../assets/centro-flag-loop.webp';
 const currentYear = new Date().getFullYear();
 ---
 
@@ -15,7 +17,11 @@ const currentYear = new Date().getFullYear();
 
       <div class="text-center">
         <a href="https://centro.edu.mx/" class="inline-block" target="_blank">
-          <img src="/centro-flag-loop.webp" alt="CENTRO Diseño, Cine, Televisión | Logotipo" class="w-36">
+          <Image 
+            src={centroFlagLoop} 
+            alt="CENTRO Diseño, Cine, Televisión | Logotipo" 
+            class="w-36"
+          />
         </a>
       </div>
 
