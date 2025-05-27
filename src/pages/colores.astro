@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageNavigation from '../components/PageNavigation.astro';
+import { Image } from 'astro:assets';
+import typography from '../assets/typography-by-brett-jordan-92-unsplash.jpg';
 ---
 
 <Layout title="Colores">
@@ -81,8 +83,8 @@ import PageNavigation from '../components/PageNavigation.astro';
 		</section>
 	</main>
 	<PageNavigation
-		prev={{ href: "/markup", title: "Tipografía" }}
-		next={{ href: "/assets", title: "Assets" }}
+		prev={{ href: "/alt-me/markup", title: "Tipografía", image: typography }}
+		next={{ href: "/alt-me/assets", title: "Assets" }}
 	/>
 </Layout>
 

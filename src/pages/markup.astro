@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageNavigation from '../components/PageNavigation.astro';
+import { Image } from 'astro:assets';
+import astro from '../assets/astro.webp';
+import colores from '../assets/colors-balazs-ketyi-unsplash.jpg';
 ---
 
 <Layout title="Tipografía">
@@ -70,8 +73,8 @@ import PageNavigation from '../components/PageNavigation.astro';
 		</section>
 	</main>
 	<PageNavigation
-		prev={{ href: "https://docs.astro.build/es/basics/astro-components/", title: "Components" }}
-		next={{ href: "/colores", title: "Colores" }}
+		prev={{ href: "https://docs.astro.build/es/basics/astro-components/", title: "Components", image: astro }}
+		next={{ href: "/alt-me/colores", title: "Colores", image: colores }}
 	/>
 </Layout>
 

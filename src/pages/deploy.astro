@@ -1,109 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageNavigation from '../components/PageNavigation.astro';
+import { Image } from 'astro:assets';
+import commits from '../assets/github-commits-by-ideogram.jpeg';
+import AnimatedTitle from '../components/AnimatedTitle.astro';
 ---
 
 <Layout title="Deploy">
 	<main class="container mx-auto px-4 py-8">
-		<h1 class="text-4xl font-bold mb-8">Guía de Deployment</h1>
-
+		<div class="w-full text-center">
+			<AnimatedTitle text="DEPLOY"/>
+		</div>
 		<section class="mb-12">
-			<h2 class="text-2xl font-semibold mb-4">Plataformas de Hosting</h2>
-			<div class="grid gap-6">
-				<div class="bg-white p-6 rounded-lg shadow-md">
-					<h3 class="text-xl font-semibold mb-3">Opciones Recomendadas</h3>
-					<ul class="list-disc pl-6 space-y-2">
-						<li>Vercel: Optimizado para Astro, despliegue automático</li>
-						<li>Netlify: Fácil de usar, buenas características gratuitas</li>
-						<li>GitHub Pages: Gratuito, integración con repositorios</li>
-						<li>Cloudflare Pages: Rápido, buena CDN incluida</li>
-					</ul>
-				</div>
-
-				<div class="bg-white p-6 rounded-lg shadow-md">
-					<h3 class="text-xl font-semibold mb-3">Consideraciones</h3>
-					<ul class="list-disc pl-6 space-y-2">
-						<li>Costo vs. Características</li>
-						<li>Velocidad de despliegue</li>
-						<li>Integración con CI/CD</li>
-						<li>Soporte para SSR/SSG</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-
-		<section class="mb-12">
-			<h2 class="text-2xl font-semibold mb-4">Proceso de Deployment</h2>
-			<div class="bg-white p-6 rounded-lg shadow-md">
-				<pre class="bg-gray-100 p-4 rounded overflow-x-auto">
-					<code>
-# 1. Construir el proyecto
-npm run build
-
-# 2. Probar la versión de producción localmente
-npm run preview
-
-# 3. Configurar variables de entorno
-# Crear archivo .env.production
-PUBLIC_API_URL=https://api.tudominio.com
-
-# 4. Desplegar
-# Para Vercel
-vercel --prod
-
-# Para Netlify
-netlify deploy --prod
-					</code>
-				</pre>
-			</div>
-		</section>
-
-		<section class="mb-12">
-			<h2 class="text-2xl font-semibold mb-4">Configuración de Dominio</h2>
-			<div class="bg-white p-6 rounded-lg shadow-md">
-				<ul class="list-disc pl-6 space-y-2">
-					<li>Comprar dominio en registrador (Namecheap, GoDaddy, etc.)</li>
-					<li>Configurar DNS records (A, CNAME, etc.)</li>
-					<li>Configurar SSL/HTTPS</li>
-					<li>Configurar redirecciones si es necesario</li>
-				</ul>
-			</div>
-		</section>
-
-		<section class="mb-12">
-			<h2 class="text-2xl font-semibold mb-4">Monitoreo y Mantenimiento</h2>
-			<div class="grid gap-4">
-				<a href="https://www.google.com/analytics/" class="text-blue-600 hover:underline" target="_blank">
-					Google Analytics - Análisis de tráfico
-				</a>
-				<a href="https://www.cloudflare.com/" class="text-blue-600 hover:underline" target="_blank">
-					Cloudflare - CDN y seguridad
-				</a>
-				<a href="https://www.uptimerobot.com/" class="text-blue-600 hover:underline" target="_blank">
-					UptimeRobot - Monitoreo de disponibilidad
-				</a>
-				<a href="https://www.sentry.io/" class="text-blue-600 hover:underline" target="_blank">
-					Sentry - Monitoreo de errores
-				</a>
-			</div>
-		</section>
-
-		<section>
-			<h2 class="text-2xl font-semibold mb-4">Buenas Prácticas</h2>
-			<div class="bg-white p-6 rounded-lg shadow-md">
-				<ul class="list-disc pl-6 space-y-2">
-					<li>Mantén un registro de versiones (Git)</li>
-					<li>Implementa CI/CD para despliegues automáticos</li>
-					<li>Configura monitoreo y alertas</li>
-					<li>Realiza backups regulares</li>
-					<li>Mantén las dependencias actualizadas</li>
-					<li>Documenta el proceso de deployment</li>
-				</ul>
+			<h2 class="text-2xl font-semibold mb-4">Proceso</h2>
+			<div class="p-6">
+				Documentando, vuelve más tarde.
 			</div>
 		</section>
 	</main>
 	<PageNavigation
-		prev={{ href: "/assets", title: "Assets" }}
+		prev={{ href: "/alt-me/assets", title: "Assets", image: commits }}
 	/>
 </Layout>
-

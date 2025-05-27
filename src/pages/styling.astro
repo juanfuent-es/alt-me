@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageNavigation from '../components/PageNavigation.astro';
+import { Image } from 'astro:assets';
+import metadata from '../assets/metadata-centro.png';
+import astro from '../assets/astro.webp';
 ---
 
 <Layout title="Styling">
@@ -9,7 +12,7 @@ import PageNavigation from '../components/PageNavigation.astro';
     <!-- Contenido de la página -->
   </main>
   <PageNavigation
-    prev={{ href: "/metadata", title: "Markup / Metadata" }}
-    next={{ href: "https://docs.astro.build/es/basics/astro-components/", title: "Components" }}
+    prev={{ href: "/alt-me/metadata", title: "Markup / Metadata", image: metadata }}
+    next={{ href: "https://docs.astro.build/es/basics/astro-components/", title: "Components", image: astro }}
   />
 </Layout> 

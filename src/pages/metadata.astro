@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageNavigation from '../components/PageNavigation.astro';
+import { Image } from 'astro:assets';
+import Cover from '../assets/cover-alt-me-centro-by-ia-photoshop.jpg';
+import styling from '../assets/styling-tailwind.png';
 ---
 
 <Layout title="Metadata y SEO">
@@ -95,8 +98,8 @@ const image = "/ruta/a/tu/imagen.jpg";
 		</section>
 	</main>
 	<PageNavigation
-		prev={{ href: "/rubrica", title: "Rúbrica" }}
-		next={{ href: "/styling", title: "Styling" }}
+		prev={{ href: "/alt-me/rubrica", title: "Rúbrica", image: Cover }}
+		next={{ href: "/alt-me/styling", title: "Styling", image: styling }}
 	/>
 </Layout>
 

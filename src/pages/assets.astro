@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import PageNavigation from '../components/PageNavigation.astro';
 import {Image} from 'astro:assets';
+import colores from '../assets/colors-balazs-ketyi-unsplash.jpg';
+import commits from '../assets/github-commits-by-ideogram.jpeg';
 ---
 
 <Layout title="Assets">
@@ -110,7 +112,7 @@ src/
 		</section>
 	</section>
   <PageNavigation
-    prev={{ href: "/colores", title: "Colores" }}
-    next={{ href: "/deploy", title: "Deploy" }}
+    prev={{ href: "/alt-me/colores", title: "Colores", image: colores }}
+    next={{ href: "/alt-me/deploy", title: "Deploy", image: commits }}
   />
 </Layout>
