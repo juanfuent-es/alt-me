@@ -10,8 +10,7 @@ import PageNavigation from '../components/PageNavigation.astro';
 		<section class="mb-12">
 			<h2 class="text-2xl font-semibold mb-4">Metadata Básica</h2>
 			<div class="grid gap-6">
-				<article class="bg-white p-6 rounded-lg shadow-md">
-					<h3 class="text-xl font-semibold mb-3">Meta Tags Esenciales</h3>
+				<article class="p-6">
 					<pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded overflow-x-auto">
 						<code class="block text-sm">
 {`<meta charset="UTF-8">
@@ -23,8 +22,8 @@ import PageNavigation from '../components/PageNavigation.astro';
 					</pre>
 				</article>
 
-				<article class="bg-white p-6 rounded-lg shadow-md">
-					<h3 class="text-xl font-semibold mb-3">Open Graph Tags</h3>
+				<article class="p-6">
+					<h3 class="text-xl font-semibold mb-3">Protocolo Open Graph</h3>
 					<pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded overflow-x-auto">
 						<code class="block text-sm">
 {`<meta property="og:title" content="Título de la página">
@@ -40,7 +39,7 @@ import PageNavigation from '../components/PageNavigation.astro';
 
 		<section class="mb-12">
 			<h2 class="text-2xl font-semibold mb-4">Implementación en Astro</h2>
-			<article class="bg-white p-6 rounded-lg shadow-md">
+			<article class="p-6">
 				<pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded overflow-x-auto">
 					<code class="block text-sm">
 {`---
@@ -74,16 +73,16 @@ const image = "/ruta/a/tu/imagen.jpg";
 		<section class="mb-12">
 			<h2 class="text-2xl font-semibold mb-4">Herramientas de SEO</h2>
 			<nav class="grid gap-4">
-				<a href="https://developers.google.com/search/docs" class="text-blue-600 hover:underline" target="_blank">Google Search Central - Documentación oficial</a>
-				<a href="https://metatags.io/" class="text-blue-600 hover:underline" target="_blank">Meta Tags - Generador de meta tags</a>
-				<a href="https://www.heymeta.com/" class="text-blue-600 hover:underline" target="_blank">Hey Meta - Validador de meta tags</a>
-				<a href="https://www.schema.org/" class="text-blue-600 hover:underline" target="_blank">Schema.org - Marcado estructurado</a>
+				<a href="https://developers.google.com/search/docs" class="hover:underline" target="_blank">Google Search Central - Documentación oficial</a>
+				<a href="https://metatags.io/" class="hover:underline" target="_blank">Meta Tags - Generador de meta tags</a>
+				<a href="https://www.heymeta.com/" class="hover:underline" target="_blank">Hey Meta - Validador de meta tags</a>
+				<a href="https://www.schema.org/" class="hover:underline" target="_blank">Schema.org - Marcado estructurado</a>
 			</nav>
 		</section>
 
 		<section>
 			<h2 class="text-2xl font-semibold mb-4">Buenas Prácticas</h2>
-			<article class="bg-white p-6 rounded-lg shadow-md">
+			<article class="p-6">
 				<ul class="list-disc pl-6 space-y-2">
 					<li>Escribe descripciones únicas para cada página</li>
 					<li>Mantén los títulos entre 50-60 caracteres</li>
