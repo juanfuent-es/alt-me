@@ -26,9 +26,11 @@ jobs:
           node-version: "20"
           cache: 'npm'
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       - name: Build with Astro
         run: npm run build
+      - name: Create .nojekyll file
+        run: touch ./docs/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
