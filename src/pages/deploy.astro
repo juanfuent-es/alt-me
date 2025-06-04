@@ -12,9 +12,104 @@ import AnimatedTitle from '../components/AnimatedTitle.astro';
 			<AnimatedTitle text="DEPLOY"/>
 		</div>
 		<section class="mb-12">
-			<h2 class="text-2xl font-semibold mb-4">Proceso</h2>
-			<div class="p-6">
-				Documentando, vuelve más tarde.
+			<h2 class="text-2xl font-semibold mb-4">Configuración del Proyecto</h2>
+			<div class="p-6 ">
+				<h3 class="text-xl font-medium mb-3">1. Configuración de Astro</h3>
+				<p class="mb-4">En tu archivo de configuración de Astro <code class=" px-2 py-1 rounded">astro.config.mjs</code>, asegúrate de tener las siguientes definiciones:</p>
+				<pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4">
+<code>{`export default defineConfig({
+  site: "https://[tu-usuario].github.io/[nombre-repo]",
+  base: "/[nombre-repo]",
+  outDir: "docs",
+  // ... resto de tu configuración
+});`}</code></pre>
+			</div>
+		</section>
+
+		<section class="mb-12">
+			<h2 class="text-2xl font-semibold mb-4">Configuración de GitHub Pages</h2>
+			<div class="p-6 ">
+				<h3 class="text-xl font-medium mb-3">1. Configuración del Repositorio</h3>
+				<ol class="list-decimal list-inside space-y-2 mb-4">
+					<li>Ve a la configuración de tu repositorio en GitHub</li>
+					<li>Navega a "Pages" en el menú lateral</li>
+					<li>En "Source", selecciona "Deploy from a branch"</li>
+					<li>En "Branch", selecciona "main" y la carpeta "/docs"</li>
+					<li>Guarda la configuración</li>
+				</ol>
+			</div>
+		</section>
+
+		<section class="mb-12">
+			<h2 class="text-2xl font-semibold mb-4">GitHub Actions</h2>
+			<div class="p-6 ">
+				<h3 class="text-xl font-medium mb-3">1. Configuración del Workflow</h3>
+				<p class="mb-4">Crea un archivo o edita el existente en <code class=" px-2 py-1 rounded">.github/workflows/deploy.yml</code> con el siguiente contenido:</p>
+				<p class="mb-1 text-white">También puedes hacer una copia del <a target="_blank" href="https://github.com/JuanFuent-es/alt-me/blob/main/.github/workflows/deploy.yml" class="text-blue-500 hover:underline">archivo de configuración de ejemplo de este repositorio</a></p>
+				<pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4">
+<code>{`name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build with Astro
+        run: npm run build
+      - name: Create .nojekyll file
+        run: touch ./docs/.nojekyll
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./docs
+
+  deploy:
+    environment:
+      name: github-pages
+      url: \${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4`}</code></pre>
+			</div>
+		</section>
+
+		<section class="mb-12">
+			<h2 class="text-2xl font-semibold mb-4">Proceso de Despliegue</h2>
+			<div class="p-6 ">
+				<h3 class="text-xl font-medium mb-3">Pasos para desplegar en producción</h3>
+				<ol class="list-decimal list-inside space-y-2">
+					<li>Realiza tus cambios en el código</li>
+					<li>Haz commit y push a la rama main (Sincronizar)</li>
+					<li>GitHub Actions se ejecutará automáticamente</li>
+					<li>El sitio se construirá y desplegará en la carpeta /docs</li>
+					<li>GitHub Pages publicará automáticamente el contenido de /docs</li>
+				</ol>
+				<p class="mt-4 text-sm text-gray-400">Nota: El despliegue puede tardar unos minutos en completarse. Puedes verificar el estado en la pestaña "Actions" de tu repositorio.</p>
 			</div>
 		</section>
 	</main>
